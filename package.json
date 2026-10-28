@@ -7,7 +7,9 @@
     "build": "node scripts/build.mjs",
     "validate": "node scripts/validate-artifact.mjs",
     "test": "node scripts/test-server.mjs",
-    "build:pages": "node scripts/build-pages.mjs --base santa-elena-restobar"
+    "build:pages": "node scripts/build-pages.mjs --base santa-elena-restobar",
+    "pretest": "npm run build",
+    "check": "npm test && npm run validate"
   },
   "version": "2.0.0",
   "description": "Carta digital privada de Santa Elena Restobar · Bombvstic",

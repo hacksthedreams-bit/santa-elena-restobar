@@ -11,6 +11,35 @@ const json = (d, status = 200) =>
       'x-content-type-options': 'nosniff',
     },
   });
+// Política de seguridad también por cabecera: la etiqueta <meta> no admite frame-ancestors,
+// y sin él la carta y /admin se podrían incrustar en otro sitio (clickjacking).
+const PAGE_CSP =
+  "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; frame-src https://maps.google.com https://www.google.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'";
+const OTHER_CSP = "default-src 'none'; img-src 'self' data:; frame-ancestors 'none'";
+function withSecurityHeaders(res) {
+  const headers = new Headers(res.headers);
+  const isHtml = (headers.get('content-type') || '').startsWith('text/html');
+  headers.set('content-security-policy', isHtml ? PAGE_CSP : OTHER_CSP);
+  headers.set('x-frame-options', 'DENY');
+  headers.set('x-content-type-options', 'nosniff');
+  headers.set('referrer-policy', 'strict-origin-when-cross-origin');
+  headers.set('permissions-policy', 'camera=(), microphone=(), geolocation=(), payment=(), usb=()');
+  headers.set('cross-origin-opener-policy', 'same-origin');
+  return new Response(res.body, { status: res.status, statusText: res.statusText, headers });
+}
+// Orígenes que pueden escribir en /api/admin además del propio. Se pueden sumar otros con la
+// variable ALLOWED_ORIGINS (separados por comas), por ejemplo al migrar de alojamiento.
+const DEFAULT_ORIGINS = ['https://santa-elena-carta-digital.bombvstic.chatgpt.site'];
+function originAllowed(req, url, env) {
+  const origin = req.headers.get('origin');
+  // Sin Origin solo se acepta si el navegador declara que la petición es del mismo sitio.
+  if (!origin) return req.headers.get('sec-fetch-site') === 'same-origin';
+  const extra = String(env.ALLOWED_ORIGINS || '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return [url.origin, ...DEFAULT_ORIGINS, ...extra].includes(origin);
+}
 function canManage(req, env) {
   const email = req.headers.get('oai-authenticated-user-email')?.trim().toLowerCase();
   return (
@@ -85,7 +114,7 @@ function validateHours(h) {
     return { closed: false, open: x.open, close: x.close };
   });
 }
-export default {
+const app = {
   async fetch(req, env) {
     try {
       const u = new URL(req.url),
@@ -96,13 +125,7 @@ export default {
         if (!canManage(req, env)) return json({ error: 'Acceso de administrador requerido.' }, 403);
         if (!env.BUCKET) return json({ error: 'El almacenamiento no está disponible.' }, 503);
         if (req.method !== 'POST') return json({ error: 'Método no permitido.' }, 405);
-        if (
-          req.headers.get('origin') &&
-          ![u.origin, 'https://santa-elena-carta-digital.bombvstic.chatgpt.site'].includes(
-            req.headers.get('origin'),
-          )
-        )
-          return json({ error: 'Origen no permitido.' }, 403);
+        if (!originAllowed(req, u, env)) return json({ error: 'Origen no permitido.' }, 403);
         const size = +(req.headers.get('content-length') || 0);
         if (size > 5 * 1024 * 1024) return json({ error: 'Archivo demasiado grande.' }, 413);
         if (path === '/api/admin/photo') {
@@ -213,13 +236,19 @@ export default {
       }
       if (req.method !== 'GET' && req.method !== 'HEAD')
         return new Response('Method not allowed', { status: 405 });
-      const key =
-        path === '/'
-          ? 'index.html'
-          : path === '/admin'
-            ? 'admin.html'
-            : decodeURIComponent(path).slice(1);
-      const a = ASSETS[key];
+      let key;
+      try {
+        key =
+          path === '/'
+            ? 'index.html'
+            : path === '/admin'
+              ? 'admin.html'
+              : decodeURIComponent(path).slice(1);
+      } catch {
+        return new Response('Bad request', { status: 400 });
+      }
+      // Object.hasOwn evita que /constructor o /__proto__ resuelvan propiedades heredadas de Object.
+      const a = Object.hasOwn(ASSETS, key) ? ASSETS[key] : null;
       if (!a) return new Response('Not found', { status: 404 });
       const b = Uint8Array.from(atob(a.data), (c) => c.charCodeAt(0));
       return new Response(req.method === 'HEAD' ? null : b, {
@@ -235,5 +264,10 @@ export default {
       console.error('Request failed', e?.message);
       return json({ error: 'No se pudo completar la solicitud. Inténtalo de nuevo.' }, 500);
     }
+  },
+};
+export default {
+  async fetch(req, env) {
+    return withSecurityHeaders(await app.fetch(req, env));
   },
 };

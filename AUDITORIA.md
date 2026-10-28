@@ -1,8 +1,16 @@
-# Auditoría · Santa Elena Restobar · carta digital
+| F3 | ✅ Pundefined || S3 | ✅ Pundefined || S2 | ✅ Pundefined || S1 | ✅ Pundefined |# Auditoría · Santa Elena Restobar · carta digital
 
 Fecha: 28 de octubre de 2026. Alcance: `public/`, `worker/`, `scripts/`, datos de `source-evidence/` y `menu.json`, más una revisión en navegador (390, 768, 1024 y escritorio). Se compararon también las prácticas de los otros proyectos de la agencia (Chang Sheng, La Terraza de Lupita), que ya incluyen `404.html`, etiquetas OG, JSON-LD y páginas de privacidad.
 
 Lo que se **verificó que está bien**: sin secretos en el código; sin dependencias npm (cero superficie de cadena de suministro); escapado HTML consistente (`esc()`) en todas las plantillas; parámetros de URL validados con lista blanca; subida de fotos limitada a JPG/PNG/WebP con comprobación de firma; stock y horarios validados en el servidor; 225 productos y precios idénticos a `source-evidence/products.json`; sin IDs duplicados, sin imágenes rotas, sin referencias de opciones huérfanas; sin fallos de contraste en fondos sólidos; un solo `h1`; `lang="es-CL"`.
+
+**Resueltas el 28 de octubre de 2026 (marcadas con ✅):** S1 (cabeceras de seguridad), S2 (origen estricto, con `ALLOWED_ORIGINS`), S3 (rutas anómalas) y F3 (`pretest` reconstruye y `build` sin patrones `| F3 | ✅ Pundefined || S3 | ✅ Pundefined || S2 | ✅ Pundefined || S1 | ✅ Pundefined |# Auditoría · Santa Elena Restobar · carta digital
+
+Fecha: 28 de octubre de 2026. Alcance: `public/`, `worker/`, `scripts/`, datos de `source-evidence/` y `menu.json`, más una revisión en navegador (390, 768, 1024 y escritorio). Se compararon también las prácticas de los otros proyectos de la agencia (Chang Sheng, La Terraza de Lupita), que ya incluyen `404.html`, etiquetas OG, JSON-LD y páginas de privacidad.
+
+Lo que se **verificó que está bien**: sin secretos en el código; sin dependencias npm (cero superficie de cadena de suministro); escapado HTML consistente (`esc()`) en todas las plantillas; parámetros de URL validados con lista blanca; subida de fotos limitada a JPG/PNG/WebP con comprobación de firma; stock y horarios validados en el servidor; 225 productos y precios idénticos a `source-evidence/products.json`; sin IDs duplicados, sin imágenes rotas, sin referencias de opciones huérfanas; sin fallos de contraste en fondos sólidos; un solo `h1`; `lang="es-CL"`.
+
+). Las pruebas nuevas están en `scripts/test-server.mjs`.
 
 Escala de prioridad: **P0** hacer ya · **P1** próxima iteración · **P2** cuando haya tiempo · **P3** opcional. Esfuerzo: **S** (horas) · **M** (1–2 días) · **L** (más). 🔒 = requiere decisión, dato o acceso del restaurante/cliente.
 
