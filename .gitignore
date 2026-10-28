@@ -1,0 +1,8 @@
+dist/
+.sites-runtime/
+.local-state/
+outputs/
+node_modules/
+.env*
+pages-dist/
+.openai/hosting.json

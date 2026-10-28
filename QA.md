@@ -1,0 +1,12 @@
+# Verificación de la revisión visual · 28 de octubre de 2026
+
+- Comparación de los 225 productos con source-evidence/products.json: IDs, nombre, precio, descripción original, disponibilidad y opciones conservados. Todas las imágenes resuelven a archivos locales, sin referencias genéricas de categoría pendientes.
+- Inspección visual de imágenes nuevas por lotes; corrección del Churrasco Brasil para representarlo como sándwich. Imágenes ilustrativas y ambientadas identificadas, sin atribuirlas a fotografía real del local.
+- Worker compilado y validador ESM default.fetch aprobado. Pruebas de API: rechazo anónimo/visitante, origen externo, IDs/estados inválidos; stock diario con vencimiento de Chile, persistencia desde una segunda instancia, disponibilidad permanente, restauración, favoritos y horarios válidos/ inválidos.
+- Navegador: 225 tarjetas cargadas, cero imágenes rotas observadas. Menú superior móvil despliega navegación; enlace Carta funcional. Postres separado arroja cuatro productos; filtro de postres y búsqueda de cóctel arroja cero; al seleccionar toda la carta, Laguna Azul arroja uno. Su ficha muestra nombre, precio e ingredientes de origen; Escape cierra y conserva filtros. Guardado personal en ficha confirmado y Mis favoritos devuelve el producto.
+- Búsqueda sin tildes e ingredientes, estados vacíos, opciones/suplementos y precio pendiente ya verificados en la versión inicial. Se mantienen en esta revisión.
+- Stock en UI local: Alitas BBQ marcado por hoy en administración, verificado SIN STOCK en la carta y restaurado al estado original. Los datos de prueba locales no se despliegan.
+- Layout responsive medido en iframes de 360, 390, 430, 768, 1024, 1280 y 1920 px. Se detectó y corrigió desborde decorativo en 360 y 768; medidas finales scrollWidth=clientWidth. No equivale a pruebas en hardware iOS/Android.
+- Revisión visual de hero escritorio y móvil, administración a 360 px, categorías y ficha. Texto ampliado y vista compacta sin desborde a 390 px. Reloj observado avanzando con zona America/Santiago. Horarios sin confirmar no afirman apertura/cierre.
+- Archivo temporal de validación responsive retirado antes de empaquetar. Cache bust de CSS/JS en HTML y menu.json sin caché para la actualización de usuarios previos.
+- Privacidad consultada: propietario únicamente, cero visitantes externos y cero grupos. No se cambió la audiencia. Integración de stock en producción debe verificarse tras desplegar el binding de almacenamiento.

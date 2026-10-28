@@ -1,0 +1,826 @@
+[
+  {
+    "id": 196,
+    "name": "Ave Brasil",
+    "description": "Pechuga de pollo desmenuzada artesanalmente, cubierta con queso Gouda fundido, palta Hass molida y nuestra cremosa mayonesa de la casa. Servido caliente en pan frica Exquisito",
+    "category": "Ave",
+    "ref": 195,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Ave Brasil\", category \"Ave\". Published description: Pechuga de pollo desmenuzada artesanalmente, cubierta con queso Gouda fundido, palta Hass molida y nuestra cremosa mayonesa de la casa. Servido caliente en pan frica Exquisito Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-f2518a09-e0cd-4d03-bc9f-94fd02050bb8.png"
+  },
+  {
+    "id": 199,
+    "name": "Ave Chacarero",
+    "description": null,
+    "category": "Ave",
+    "ref": 195,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Ave Chacarero\", category \"Ave\". There is no published ingredient list: avoid showing extra ingredients or side dishes not implied by the product name. Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-71f44585-d724-4f48-99cb-fcc50e21ab42.png"
+  },
+  {
+    "id": 197,
+    "name": "Ave Queso",
+    "description": "Pechuga de pollo desmenuzada artesanalmente y una generosa porción de queso Gouda fundido. Servido caliente en pan frica Exquisito",
+    "category": "Ave",
+    "ref": 195,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Ave Queso\", category \"Ave\". Published description: Pechuga de pollo desmenuzada artesanalmente y una generosa porción de queso Gouda fundido. Servido caliente en pan frica Exquisito Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-ec059ee6-0836-4adc-850f-b217b44a366e.png"
+  },
+  {
+    "id": 424,
+    "name": "Ave Tomate Mayo",
+    "description": null,
+    "category": "Ave",
+    "ref": 195,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Ave Tomate Mayo\", category \"Ave\". There is no published ingredient list: avoid showing extra ingredients or side dishes not implied by the product name. Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-080796cb-c721-41cb-9720-3561013d2469.png"
+  },
+  {
+    "id": 328,
+    "name": "Agua Tonica",
+    "description": null,
+    "category": "Bebidas.",
+    "ref": 279,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Agua Tonica\", category \"Bebidas.\". There is no published ingredient list: avoid showing extra ingredients or side dishes not implied by the product name. Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-3e5d7e69-c79c-4e6f-be47-d53c103efe0c.png"
+  },
+  {
+    "id": 329,
+    "name": "Cachantun Con Gas 600ml",
+    "description": null,
+    "category": "Bebidas.",
+    "ref": 279,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Cachantun Con Gas 600ml\", category \"Bebidas.\". There is no published ingredient list: avoid showing extra ingredients or side dishes not implied by the product name. Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-ce33777d-4547-41d1-a948-d3bd2e738260.png"
+  },
+  {
+    "id": 330,
+    "name": "Cachantun Sin Gas 600ml",
+    "description": null,
+    "category": "Bebidas.",
+    "ref": 279,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Cachantun Sin Gas 600ml\", category \"Bebidas.\". There is no published ingredient list: avoid showing extra ingredients or side dishes not implied by the product name. Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-c8581c12-1f10-4c32-bd94-3cf388e25b92.png"
+  },
+  {
+    "id": 283,
+    "name": "Fanta Lata 350ml",
+    "description": null,
+    "category": "Bebidas.",
+    "ref": 279,
+    "prompt": "Use case: product-mockup. One portrait editorial photograph for an explicitly illustrative digital-menu reference, product \"Fanta Lata 350ml\", category \"Bebidas.\". There is no published ingredient list: avoid showing extra ingredients or side dishes not implied by the product name. Use supplied photo ONLY for rustic dark wooden tabletop, warm side lighting, shadows and camera angle, replace its foreground product completely with the named product. Natural realistic textures, professional restobar food photography, no plastic CGI. No text or watermark. No other foods, unlisted garnishes or invented accompaniments. If a sandwich, ordinary Chilean sandwich presentation on plate, focus on the named filling. This is illustrative, not a claim to reproduce a real restaurant portion.",
+    "originalGenerationFilename": "exec-ced3801a-1784-424a-9481-ab77cbf2b976.png"
+  },
+  {
+    "id": 372,
+    "name": "Martini Dry",
+    "description": "Coctel clasico. Combina a la perfeccion el gin y el Martini Dry. Servido en su copa Caracteristica muy fria. Decorado con una aceituna y aromatizado con pieles de limon",
+    "category": "Cocteles",
+    "ref": 235,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"Martini Dry\". Only the published ingredients: Coctel clasico. Combina a la perfeccion el gin y el Martini Dry. Servido en su copa Caracteristica muy fria. Decorado con una aceituna y aromatizado con pieles de limon Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product. Martini Dry: a clear pale classic cocktail in a stemmed V martini glass with the olive and lemon peel mentioned in its published description. Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-34f7808b-cc9f-4ca1-b05a-843265fe9b29.png"
+  },
+  {
+    "id": 260,
+    "name": "Olds Fashion",
+    "description": "Sofisticación pura en un vaso corto. Whisky Escoces, un toque de azúcar caramelizada, amargo de Angostura y un sutil aceite de piel de naranja. Para quienes aprecian los clásicos.",
+    "category": "Cocteles",
+    "ref": 235,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"Olds Fashion\". Only the published ingredients: Sofisticación pura en un vaso corto. Whisky Escoces, un toque de azúcar caramelizada, amargo de Angostura y un sutil aceite de piel de naranja. Para quienes aprecian los clásicos. Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product.  Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-8efd344c-cf42-4c6b-b3e6-7173c6166645.png"
+  },
+  {
+    "id": 373,
+    "name": "Ruso Negro",
+    "description": "Trago clasico. En vaso corto. Mezclando el licor de cafe con el vodka. Decorado con Marrosquino",
+    "category": "Cocteles",
+    "ref": 235,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"Ruso Negro\". Only the published ingredients: Trago clasico. En vaso corto. Mezclando el licor de cafe con el vodka. Decorado con Marrosquino Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product.  Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-0622aebc-2ac3-47fc-ae0a-f241aaf12fbb.png"
+  },
+  {
+    "id": 221,
+    "name": "Alitas BBQ",
+    "description": "6 Alitas BBQ",
+    "category": "Para Picar",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"Alitas BBQ\". Only the published ingredients: 6 Alitas BBQ Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product. Exactly six BBQ chicken wings on a small wooden serving board, no fries, no salad. Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-dc151839-e442-4607-b1c8-72a08d1e0ee3.png"
+  },
+  {
+    "id": 215,
+    "name": "Bife Lomo Liso",
+    "description": "300g de lomo liso, acompañamiento a eleccion",
+    "category": "Platos Preparados",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"Bife Lomo Liso\". Only the published ingredients: 300g de lomo liso, acompañamiento a eleccion Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product.  Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-3ce2ed4d-22b8-47e0-818b-86144ec1817c.png"
+  },
+  {
+    "id": 217,
+    "name": "Pollo a la Plancha.",
+    "description": "Filete de pechuga a la plancha con acompañamiento a elección",
+    "category": "Platos Preparados",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"Pollo a la Plancha.\". Only the published ingredients: Filete de pechuga a la plancha con acompañamiento a elección Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product.  Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-1d341a0b-bbf2-4871-9449-73d0976daaac.png"
+  },
+  {
+    "id": 216,
+    "name": "Reineta a la mantequilla.",
+    "description": "Reineta a La mantequilla, con acompañamiento a eleccion",
+    "category": "Platos Preparados",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"Reineta a la mantequilla.\". Only the published ingredients: Reineta a La mantequilla, con acompañamiento a eleccion Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product.  Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-b2878f6a-970d-4086-9b30-e28a30e4a321.png"
+  },
+  {
+    "id": 149,
+    "name": "arroz con leche",
+    "description": null,
+    "category": "Postres",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"arroz con leche\". No ingredient list exists; show only what the product name confirms, without extra garnishes, toppings or side dishes. Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product. Show one elegant simple dessert in a small bowl on the dark wood. Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-432490fd-f770-4029-a122-7365d03d1c62.png"
+  },
+  {
+    "id": 150,
+    "name": "leche asada",
+    "description": null,
+    "category": "Postres",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"leche asada\". No ingredient list exists; show only what the product name confirms, without extra garnishes, toppings or side dishes. Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product. Show one elegant simple dessert in a small bowl on the dark wood. Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-1b312d82-b7a3-488d-8f2b-38c0d58bfc72.png"
+  },
+  {
+    "id": 187,
+    "name": "mousse de frutilla",
+    "description": null,
+    "category": "Postres",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"mousse de frutilla\". No ingredient list exists; show only what the product name confirms, without extra garnishes, toppings or side dishes. Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product. Show one elegant simple dessert in a small bowl on the dark wood. Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-62a6913c-e6cc-4870-a0b4-fafee114e399.png"
+  },
+  {
+    "id": 184,
+    "name": "mousse de maracuya",
+    "description": null,
+    "category": "Postres",
+    "ref": 426,
+    "prompt": "Use case: product-mockup. One photorealistic portrait menu reference for \"mousse de maracuya\". No ingredient list exists; show only what the product name confirms, without extra garnishes, toppings or side dishes. Supplied photo is a STYLE reference for dark rustic restobar tabletop, warm side light and blurred background; completely replace the original foreground product. Show one elegant simple dessert in a small bowl on the dark wood. Natural appetizing texture, no CGI, no labels, no lettering, no watermark. Illustrative presentation for a demo, not a claim of real portion or local recipe.",
+    "originalGenerationFilename": "exec-31a4fd98-ae38-43c8-bc9d-ef340dfad899.png"
+  },
+  {
+    "id": 201,
+    "name": "Churrasco Brasil",
+    "description": null,
+    "categoryId": 27,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Churrasco Brasil\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-9f4311a9-c2df-45a9-952e-dcd082af395a.png"
+  },
+  {
+    "id": 204,
+    "name": "Churrasco Chacarero",
+    "description": null,
+    "categoryId": 27,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Churrasco Chacarero\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-6d25fb07-2ecd-46a2-9167-4193816cfa63.png"
+  },
+  {
+    "id": 200,
+    "name": "Churrasco Italiano",
+    "description": null,
+    "categoryId": 27,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Churrasco Italiano\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-7ba5d084-c203-4032-8a0f-d02de57afe0f.png"
+  },
+  {
+    "id": 202,
+    "name": "Churrasco Queso",
+    "description": null,
+    "categoryId": 27,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Churrasco Queso\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-85878e81-dc19-4416-b803-396ae92c3f65.png"
+  },
+  {
+    "id": 457,
+    "name": "Churrasco Tomate Mayo",
+    "description": null,
+    "categoryId": 27,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Churrasco Tomate Mayo\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-b95665af-ffc1-431f-a615-335a9f338f03.png"
+  },
+  {
+    "id": 206,
+    "name": "Mechada Brasil",
+    "description": "Carne de vacuno desmechada lentamente en su propio jugo, cubierta con queso Gouda fundido, palta Hass molida y nuestra cremosa mayonesa de la casa. Servido caliente en pan frica Exquisito",
+    "categoryId": 26,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Mechada Brasil\". Published description: Carne de vacuno desmechada lentamente en su propio jugo, cubierta con queso Gouda fundido, palta Hass molida y nuestra cremosa mayonesa de la casa. Servido caliente en pan frica Exquisito Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-736dff53-443c-4915-8a31-465723175ac9.png"
+  },
+  {
+    "id": 209,
+    "name": "Mechada Chacarero",
+    "description": null,
+    "categoryId": 26,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Mechada Chacarero\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-fa460349-8cbb-4f84-94e1-d83099420500.png"
+  },
+  {
+    "id": 207,
+    "name": "Mechada Queso",
+    "description": "Carne de vacuno desmechada lentamente en su propio jugo, combinada con una generosa porción de queso Gouda fundido. Servido bien caliente en pan frica exquisito",
+    "categoryId": 26,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Mechada Queso\". Published description: Carne de vacuno desmechada lentamente en su propio jugo, combinada con una generosa porción de queso Gouda fundido. Servido bien caliente en pan frica exquisito Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-54559ec9-dc88-4bfe-a41a-a1dd9e0953bd.png"
+  },
+  {
+    "id": 361,
+    "name": "Mechada Tomate Mayo",
+    "description": null,
+    "categoryId": 26,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Mechada Tomate Mayo\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-cee956be-d65e-4c80-aa4a-dac8bb1e150a.png"
+  },
+  {
+    "id": 213,
+    "name": "Chorrillana.",
+    "description": "Papas Fritas, Carne, Cebolla caramelizada, Longaniza y Huevos",
+    "categoryId": 29,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Chorrillana.\". Published description: Papas Fritas, Carne, Cebolla caramelizada, Longaniza y Huevos Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-359a9c86-b60a-45c5-9c72-177595e70e03.png"
+  },
+  {
+    "id": 380,
+    "name": "Papas Fritas Individuales",
+    "description": null,
+    "categoryId": 29,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Papas Fritas Individuales\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings. Only golden fries on a small wooden serving board, no meats or sauces. No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-447076a2-3e69-4666-9a6b-d67dbbf2d7cb.png"
+  },
+  {
+    "id": 363,
+    "name": "Papas Volcan de Queso XL",
+    "description": "El picoteo definitivo para compartir. Una espectacular base de papas fritas crujientes y Alitas BBQ. Todo coronado con triángulos de queso Camembert apanados, fritos a la perfección para lograr un corazón caliente y completamente derretido.",
+    "categoryId": 29,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Papas Volcan de Queso XL\". Published description: El picoteo definitivo para compartir. Una espectacular base de papas fritas crujientes y Alitas BBQ. Todo coronado con triángulos de queso Camembert apanados, fritos a la perfección para lograr un corazón caliente y completamente derretido. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-44d68d2f-1b03-45e4-b225-4a7237bed303.png"
+  },
+  {
+    "id": 210,
+    "name": "Supremas",
+    "description": "Papas Fritas, Queso Cheddar, Tocino y Cebollin",
+    "categoryId": 29,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Supremas\". Published description: Papas Fritas, Queso Cheddar, Tocino y Cebollin Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-aaf0749a-c3be-412a-974b-866f38ad19ca.png"
+  },
+  {
+    "id": 475,
+    "name": "Pastel De Jaiba",
+    "description": null,
+    "categoryId": 33,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Pastel De Jaiba\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings.  No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-028628b1-44a7-4990-966d-36ed486bedae.png"
+  },
+  {
+    "id": 225,
+    "name": "Trilogia Empanada Queso",
+    "description": "",
+    "categoryId": 33,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Trilogia Empanada Queso\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings. Exactly three small empanadas with the named filling. No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-17212649-6317-4ee8-96f6-172e0f7d1546.png"
+  },
+  {
+    "id": 224,
+    "name": "Trilogia Empanadas Camaron Queso",
+    "description": null,
+    "categoryId": 33,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Trilogia Empanadas Camaron Queso\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings. Exactly three small empanadas with the named filling. No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-3d01fe6d-583a-48cf-b6f9-190d610471b5.png"
+  },
+  {
+    "id": 222,
+    "name": "Trilogia Empanadas Champiñon Queso",
+    "description": "",
+    "categoryId": 33,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Trilogia Empanadas Champiñon Queso\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings. Exactly three small empanadas with the named filling. No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-977c03a1-b17a-44fb-9c09-3634a31ad73b.png"
+  },
+  {
+    "id": 223,
+    "name": "Trilogia Empanadas Mechada Queso",
+    "description": "",
+    "categoryId": 33,
+    "ref": 426,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Trilogia Empanadas Mechada Queso\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings. Exactly three small empanadas with the named filling. No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-141706af-b175-4f7e-b499-6f62c157aa9a.png"
+  },
+  {
+    "id": 463,
+    "name": "Vienesa Italiana",
+    "description": null,
+    "categoryId": 60,
+    "ref": 195,
+    "kind": "food",
+    "prompt": "Use case: product-mockup. One portrait appetizing natural photograph illustrating \"Vienesa Italiana\". There is no published ingredient list: only show ingredients implied by the literal product name, no extra toppings or accompaniments. Supplied image is a style reference ONLY for dark rustic wooden restobar background, warm light, photographic perspective and elegant plating. Replace the food completely with this named food, do not copy the reference sandwich or wings. A Chilean hot dog in a long soft roll, not a burger. No extra side dishes, garnish or food not confirmed by name/description. No text, logos, watermark or plastic CGI. An explicitly illustrative presentation for a private demo, never evidence of the actual restaurant portion.",
+    "originalGenerationFilename": "exec-e8c7a973-fc82-4062-997c-0135daadc39d.png"
+  },
+  {
+    "id": 303,
+    "name": "Botella Absolut Variedades",
+    "white": 0.69,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Absolut Variedades\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-09f4e186-c804-4e2b-bf82-5590c8f81484.png"
+  },
+  {
+    "id": 295,
+    "name": "Botella Chivas Regal",
+    "white": 0.73,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Chivas Regal\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-a60f345d-b707-4858-9711-62a3a301c123.png"
+  },
+  {
+    "id": 294,
+    "name": "Botella Jack Daniels Manzana",
+    "white": 0.61,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Jack Daniels Manzana\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-9dd6c948-d164-4105-9c24-8727b2f5f74c.png"
+  },
+  {
+    "id": 293,
+    "name": "Botella Jack Daniels Miel",
+    "white": 0.84,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Jack Daniels Miel\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-5d5b7e83-2b62-402c-a592-a5d819e55954.png"
+  },
+  {
+    "id": 292,
+    "name": "Botella Jack Daniels N°7",
+    "white": 0.48,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Jack Daniels N°7\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-2546095e-7e60-4f5f-ade7-22fb6d23472b.png"
+  },
+  {
+    "id": 305,
+    "name": "Botella Jagermeister",
+    "white": 0.56,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Jagermeister\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-5ab88033-275b-4599-803c-72d8fdd701c1.png"
+  },
+  {
+    "id": 422,
+    "name": "Botella Pisco Alto del Carmen Etiqueta Blanca",
+    "white": 0.82,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Pisco Alto del Carmen Etiqueta Blanca\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-5da37c11-0035-46e5-957a-70be8bd63768.png"
+  },
+  {
+    "id": 288,
+    "name": "Botella Pisco Mistral 35",
+    "white": 0.29,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Pisco Mistral 35\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-ecb424d5-cd50-4b4c-ab97-7fe60b11a1c3.png"
+  },
+  {
+    "id": 289,
+    "name": "Botella Pisco Mistral 40° Nobel",
+    "white": 0.43,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Pisco Mistral 40° Nobel\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-eced94f7-90f2-4ca2-978c-1e02675d47ff.png"
+  },
+  {
+    "id": 297,
+    "name": "Botella Ron Barcelo Añejo",
+    "white": 0.6,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Ron Barcelo Añejo\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-f81b1c94-2571-46cd-85a9-c52d4083ee5c.png"
+  },
+  {
+    "id": 299,
+    "name": "Botella Ron Havana Añejo Reserva",
+    "white": 0.74,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Ron Havana Añejo Reserva\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-b810aff8-ef67-4fa5-8f25-f0a0680f4c90.png"
+  },
+  {
+    "id": 291,
+    "name": "Botella Whisky Johnnie Walker Black Label",
+    "white": 0.31,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Whisky Johnnie Walker Black Label\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-f366891a-d6ec-4c72-a965-5217bcae919a.png"
+  },
+  {
+    "id": 287,
+    "name": "Botella Whisky Johnnie Walker Red Label",
+    "white": 0.35,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Botella Whisky Johnnie Walker Red Label\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-7a0f9238-54aa-4ada-82cb-a47d295cc781.png"
+  },
+  {
+    "id": 332,
+    "name": "Corona 330cc",
+    "white": 0.74,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Corona 330cc\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-24791463-5d2b-4130-bd2b-658538923709.png"
+  },
+  {
+    "id": 331,
+    "name": "Heineken 330ml",
+    "white": 0.76,
+    "kind": "ambient",
+    "prompt": "Use case: compositing. Asset: one portrait professional menu photograph for \"Heineken 330ml\". First image is the EDIT TARGET and exact original product packaging. Preserve every bottle and box, product proportions, brand colors and label artwork as faithfully as possible. Remove only the plain white background. Second image is STYLE REFERENCE only: dark rustic wooden cocktail bar, warm side light, shallow depth of field, blurred bottles. Remove its foreground blue cocktail and pineapple; do not copy any drink from it. Place the exact original packaged product on this wooden bar with believable contact shadow and reflections. No added beverages, claims, labels, words or watermark. A subtle realistic product photography background replacement, never redesign the product.",
+    "originalGenerationFilename": "exec-548e1a15-602b-4b42-88fc-2fa00d7d65e8.png"
+  },
+  {
+    "id": 247,
+    "name": "Mojito Tradicional",
+    "detail": "Ron blanco, lima, azúcar y menta fresca, según la descripción de la carta. Vaso alto con hielo.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Mojito Tradicional\". Ron blanco, lima, azúcar y menta fresca, según la descripción de la carta. Vaso alto con hielo. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-c0a2f967-8edf-4f15-be3f-81b409e4cec2.png"
+  },
+  {
+    "id": 476,
+    "name": "Moscow Mule Tradicional",
+    "detail": "Una referencia visual clásica en taza de cobre con hielo; no mostrar ingredientes adicionales ni marcas porque la carta no detalla receta.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Moscow Mule Tradicional\". Una referencia visual clásica en taza de cobre con hielo; no mostrar ingredientes adicionales ni marcas porque la carta no detalla receta. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-0ca1ad6f-f339-4e06-b128-3ffd7d827b29.png"
+  },
+  {
+    "id": 259,
+    "name": "Alexander",
+    "detail": "Cóctel cremoso de whisky, licor de cacao oscuro y crema de leche, espolvoreado con cacao según la carta. Copa de cóctel con tallo.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Alexander\". Cóctel cremoso de whisky, licor de cacao oscuro y crema de leche, espolvoreado con cacao según la carta. Copa de cóctel con tallo. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-c1c11e85-da9f-4b81-8b33-e7819ae99ec7.png"
+  },
+  {
+    "id": 262,
+    "name": "Aperol",
+    "detail": "Aperol con espumante y soda según la carta, color naranja translúcido, copa con hielo.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Aperol\". Aperol con espumante y soda según la carta, color naranja translúcido, copa con hielo. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-b4466ffa-d255-47be-96b5-777e54e2c008.png"
+  },
+  {
+    "id": 375,
+    "name": "Negroni",
+    "detail": "Referencia visual de un cóctel clásico rojo ámbar en vaso corto con un cubo de hielo, sin ingredientes adicionales, sin marcas; la carta no confirma receta.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Negroni\". Referencia visual de un cóctel clásico rojo ámbar en vaso corto con un cubo de hielo, sin ingredientes adicionales, sin marcas; la carta no confirma receta. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-9fe7a670-16d4-416a-b0bb-4690a4d1e686.png"
+  },
+  {
+    "id": 374,
+    "name": "Ruso Blanco",
+    "detail": "Referencia visual de cóctel cremoso blanco y café en vaso corto con hielo, sin marcas; no afirmar una receta ni añadir toppings.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Ruso Blanco\". Referencia visual de cóctel cremoso blanco y café en vaso corto con hielo, sin marcas; no afirmar una receta ni añadir toppings. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-40421d69-f35d-43ff-8ac3-a1b10e4ea92b.png"
+  },
+  {
+    "id": 485,
+    "name": "Caipiroska",
+    "detail": "Referencia visual clásica en vaso corto, hielo y color claro; evitar garnish o ingredientes extra no especificados por el nombre.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Caipiroska\". Referencia visual clásica en vaso corto, hielo y color claro; evitar garnish o ingredientes extra no especificados por el nombre. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-0456d1a7-f08d-4a2e-a0b5-d5443202fbfb.png"
+  },
+  {
+    "id": 404,
+    "name": "Clavo Oxidado Etiqueta Roja",
+    "detail": "Referencia visual clásica: trago corto de color ámbar en vaso old-fashioned con hielo, sin botella ni marca visible, sin garnish ni otros ingredientes no confirmados.",
+    "prompt": "Use case: product-mockup. One portrait photorealistic illustrative menu photograph of \"Clavo Oxidado Etiqueta Roja\". Referencia visual clásica: trago corto de color ámbar en vaso old-fashioned con hielo, sin botella ni marca visible, sin garnish ni otros ingredientes no confirmados. Use the provided blue-cocktail photograph as BACKGROUND STYLE reference only: preserve rustic wood, warm amber lighting, softly blurred bar and a pineapple behind the glass. Replace the foreground blue drink completely with this named drink, never keep any blue liquid unless the named drink is blue. Single complete glass centered, realistic texture, professional appetizing photography. No text, no logo, no watermark. This is expressly a reference presentation for a demo, not a claim of the restaurant's real recipe.",
+    "originalGenerationFilename": "exec-464750b1-8842-404e-8b18-a16d88a2e53d.png"
+  },
+  {
+    "id": "201",
+    "out": "ref-201-v2",
+    "refs": [
+      "195.webp"
+    ],
+    "prompt": "Use case: product-mockup. One illustrative editorial menu photograph of the Chilean SANDWICH named Churrasco Brasil. This MUST be a soft round bread roll filled with thin slices of beef, on a white plate, NOT a standalone steak or a burger patty. The supplied photograph is only the rustic dark wood, warm light and bread presentation style reference. No extra accompaniments or unverified toppings. Clear appetizing photographic texture, no text, no watermark, not CGI.",
+    "originalGenerationFilename": "exec-77062e67-e2fd-4456-ad8a-7249add97f9c.png"
+  },
+  {
+    "id": "bar-set",
+    "out": "bar-set",
+    "refs": [
+      "313.webp"
+    ],
+    "prompt": "Use case: precise-object-edit. From this wine photograph create an EMPTY product-photography set with exactly the same rustic wooden counter, warm low light, dark bar background, and pineapple at the back. Remove the wine bottle completely, and replace the filled glass with a small completely EMPTY clear wine goblet on the LEFT rear. Leave the CENTER and RIGHT foreground completely empty for a separately composited bottle. No labels, text, watermark or bottles in the foreground. Photorealistic portrait background asset only.",
+    "originalGenerationFilename": "exec-e259f865-036a-45dc-bd81-5cc6be2207cd.png"
+  },
+  {
+    "id": "386",
+    "out": "ref-386",
+    "refs": [
+      "235.webp"
+    ],
+    "prompt": "Use case: product-mockup. One illustrative Gin Tonic cocktail in an elegant clear highball glass with clear ice and pale transparent liquid, subtle lime wedge only as classical visual reference. Replace the reference blue drink completely, preserving the warm wooden bar with pineapple behind and softly blurred shelves. No branded bottle, no text, no watermark, professional natural portrait photography. It is an illustrative presentation, not a restaurant recipe claim.",
+    "originalGenerationFilename": "exec-396e81d6-2a2f-4517-9430-e2c2df185d3e.png"
+  },
+  {
+    "id": "234",
+    "out": "ref-234",
+    "refs": [
+      "235.webp"
+    ],
+    "prompt": "Use case: product-mockup. One illustrative Acai Berris Gin cocktail in a clear highball glass with ice and a deep berry violet-red colored drink. Use the supplied image only as style reference: same rustic warm wooden bar and pineapple in the background. Remove the blue drink completely. No extra ingredient props or unverified garnish. Natural portrait drink photography, no text, labels, logos or watermark. Reference presentation, not proof of a local recipe.",
+    "originalGenerationFilename": "exec-75f26bc1-8222-41a7-80df-85cdc654b8e8.png"
+  },
+  {
+    "id": "322",
+    "out": "wine-tarapaca-scene",
+    "refs": [
+      "TEMP-TARAPACA",
+      "313.webp"
+    ],
+    "prompt": "Use case: compositing. First image is the exact Tarapacá Gran Reserva Merlot wine bottle to preserve, with the same label, shape and branding. Second image is a STYLE reference of a wine bottle and glass on a warm rustic wooden bar with a pineapple. Replace the second image's Aliwen bottle ONLY with the exact first bottle. Keep the glass of red wine, wooden surface, pineapple, camera angle and lighting. Respect all bottle and label details, no redesign, no new words or watermark. Professional believable product-photography compositing. The pictured vintage is referential.",
+    "originalGenerationFilename": "exec-cc3029ae-73d0-45ef-a632-8c87a8f13ac7.png"
+  },
+  {
+    "id": "439",
+    "out": "wine-castillo-scene",
+    "refs": [
+      "wine-castillo.webp",
+      "313.webp"
+    ],
+    "prompt": "Use case: compositing. First image is the exact Castillo de Molina Gran Reserva Cabernet Sauvignon wine bottle to preserve, including the copper capsule, white label and branding. Second image is a STYLE reference of a wine bottle and glass on a warm rustic wooden bar with a pineapple. Replace the second image's Aliwen bottle ONLY with the first bottle. Keep the glass of red wine, wooden surface, pineapple, camera angle and lighting. Preserve the original bottle proportions and label details, no redesign, no extra text or watermark. Professional believable product-photography compositing. The pictured vintage is referential.",
+    "originalGenerationFilename": "exec-57b5b23f-3e69-46bb-90bf-ff6b94569758.png"
+  },
+  {
+    "id": 425,
+    "out": "ambient-food-425",
+    "name": "Tabla La Picadera",
+    "refs": [
+      "425.webp",
+      "426.webp"
+    ],
+    "mode": "food-edit",
+    "prompt": "Use case: style-transfer. First image is the EDIT TARGET \"Tabla La Picadera\", preserve exactly its existing food types, ingredient layout, relative quantities, bread, platter and all drink props. Second image is only a reference for dark rustic wooden tabletop, dramatic warm side lighting and a natural professional food-photography finish. Match that background and lighting, improve realistic textures subtly, but NEVER replace the target food with the reference wings and fries, never add or remove ingredients or props. Do not add a beer if it is not in the first image. Keep composition recognizable. No text, added logos, watermark or artificial CGI sheen. Portrait menu photograph, digitally ambiented from the source.",
+    "originalGenerationFilename": "exec-c2d2174b-d7b4-42fc-b383-5b9c42f18efc.png"
+  },
+  {
+    "id": 471,
+    "out": "ambient-food-471",
+    "name": "Tabla",
+    "refs": [
+      "471.webp",
+      "426.webp"
+    ],
+    "mode": "food-edit",
+    "prompt": "Use case: style-transfer. First image is the EDIT TARGET \"Tabla\", preserve exactly its existing food types, ingredient layout, relative quantities, bread, platter and all drink props. Second image is only a reference for dark rustic wooden tabletop, dramatic warm side lighting and a natural professional food-photography finish. Match that background and lighting, improve realistic textures subtly, but NEVER replace the target food with the reference wings and fries, never add or remove ingredients or props. Do not add a beer if it is not in the first image. Keep composition recognizable. No text, added logos, watermark or artificial CGI sheen. Portrait menu photograph, digitally ambiented from the source.",
+    "originalGenerationFilename": "exec-da8dd1c9-0290-4726-8eb4-5a137c6e0643.png"
+  },
+  {
+    "id": 472,
+    "out": "ambient-food-472",
+    "name": "Tabla La Segunda",
+    "refs": [
+      "472.webp",
+      "426.webp"
+    ],
+    "mode": "food-edit",
+    "prompt": "Use case: style-transfer. First image is the EDIT TARGET \"Tabla La Segunda\", preserve exactly its existing food types, ingredient layout, relative quantities, bread, platter and all drink props. Second image is only a reference for dark rustic wooden tabletop, dramatic warm side lighting and a natural professional food-photography finish. Match that background and lighting, improve realistic textures subtly, but NEVER replace the target food with the reference wings and fries, never add or remove ingredients or props. Do not add a beer if it is not in the first image. Keep composition recognizable. No text, added logos, watermark or artificial CGI sheen. Portrait menu photograph, digitally ambiented from the source.",
+    "originalGenerationFilename": "exec-8616952f-7c7f-4e70-ae32-80f3696cf9a1.png"
+  },
+  {
+    "id": 195,
+    "out": "ambient-food-195",
+    "name": "Ave Italiano",
+    "refs": [
+      "195.webp",
+      "426.webp"
+    ],
+    "mode": "food-edit",
+    "prompt": "Use case: style-transfer. First image is the EDIT TARGET \"Ave Italiano\", preserve exactly its existing food types, ingredient layout, relative quantities, bread, platter and all drink props. Second image is only a reference for dark rustic wooden tabletop, dramatic warm side lighting and a natural professional food-photography finish. Match that background and lighting, improve realistic textures subtly, but NEVER replace the target food with the reference wings and fries, never add or remove ingredients or props. Do not add a beer if it is not in the first image. Keep composition recognizable. No text, added logos, watermark or artificial CGI sheen. Portrait menu photograph, digitally ambiented from the source.",
+    "originalGenerationFilename": "exec-f18e92c9-6d23-4be5-8c14-6b95d6c5d965.png"
+  },
+  {
+    "id": 205,
+    "out": "ambient-food-205",
+    "name": "Mechada Italiana",
+    "refs": [
+      "205.webp",
+      "426.webp"
+    ],
+    "mode": "food-edit",
+    "prompt": "Use case: style-transfer. First image is the EDIT TARGET \"Mechada Italiana\", preserve exactly its existing food types, ingredient layout, relative quantities, bread, platter and all drink props. Second image is only a reference for dark rustic wooden tabletop, dramatic warm side lighting and a natural professional food-photography finish. Match that background and lighting, improve realistic textures subtly, but NEVER replace the target food with the reference wings and fries, never add or remove ingredients or props. Do not add a beer if it is not in the first image. Keep composition recognizable. No text, added logos, watermark or artificial CGI sheen. Portrait menu photograph, digitally ambiented from the source.",
+    "originalGenerationFilename": "exec-8f61b9e4-09c5-46b5-be43-002216f14d90.png"
+  },
+  {
+    "id": 327,
+    "name": "Ginger Ale Cero",
+    "ref": "326.webp",
+    "out": "ref-327",
+    "refs": [
+      "326.webp"
+    ],
+    "mode": "soft",
+    "prompt": "Use case: product-mockup. One illustrative photorealistic menu image for \"Ginger Ale Cero\". Use the supplied cola/soda image ONLY for composition and the dark warm wooden bar background. Completely replace its foreground soda and can with the named product's appropriate familiar can presentation and a glass of ice. Sugar-free Canada Dry Ginger Ale Cero as an illustrative can reference, pale golden soda. Avoid keeping a Coca-Cola or regular Sprite can in a different product image. No added captions or price graphics, no watermark. Natural warm portrait product photography. Labelled illustrative in the website, not a claim of actual local packaging size.",
+    "originalGenerationFilename": "exec-d6f0d387-b3f7-42f1-a300-55b0d79f3b51.png"
+  },
+  {
+    "id": 282,
+    "name": "Sprite Cero Lata 350ml",
+    "ref": "281.webp",
+    "out": "ref-282",
+    "refs": [
+      "281.webp"
+    ],
+    "mode": "soft",
+    "prompt": "Use case: product-mockup. One illustrative photorealistic menu image for \"Sprite Cero Lata 350ml\". Use the supplied cola/soda image ONLY for composition and the dark warm wooden bar background. Completely replace its foreground soda and can with the named product's appropriate familiar can presentation and a glass of ice. Sprite Zero/Cero as an illustrative can reference, clear soda. Avoid keeping a Coca-Cola or regular Sprite can in a different product image. No added captions or price graphics, no watermark. Natural warm portrait product photography. Labelled illustrative in the website, not a claim of actual local packaging size.",
+    "originalGenerationFilename": "exec-e899c8eb-33be-40b8-a874-8329ad2c9b47.png"
+  },
+  {
+    "id": 323,
+    "name": "Red Bull Clasica",
+    "ref": "279.webp",
+    "out": "ref-323",
+    "refs": [
+      "279.webp"
+    ],
+    "mode": "soft",
+    "prompt": "Use case: product-mockup. One illustrative photorealistic menu image for \"Red Bull Clasica\". Use the supplied cola/soda image ONLY for composition and the dark warm wooden bar background. Completely replace its foreground soda and can with the named product's appropriate familiar can presentation and a glass of ice. Classic Red Bull blue-and-silver can. Avoid keeping a Coca-Cola or regular Sprite can in a different product image. No added captions or price graphics, no watermark. Natural warm portrait product photography. Labelled illustrative in the website, not a claim of actual local packaging size.",
+    "originalGenerationFilename": "exec-58411526-33c6-481d-bd12-e8270538cc2b.png"
+  },
+  {
+    "id": 324,
+    "name": "Red Bull Tropical",
+    "ref": "279.webp",
+    "out": "ref-324",
+    "refs": [
+      "279.webp"
+    ],
+    "mode": "soft",
+    "prompt": "Use case: product-mockup. One illustrative photorealistic menu image for \"Red Bull Tropical\". Use the supplied cola/soda image ONLY for composition and the dark warm wooden bar background. Completely replace its foreground soda and can with the named product's appropriate familiar can presentation and a glass of ice. Red Bull Tropical Yellow Edition yellow can. Avoid keeping a Coca-Cola or regular Sprite can in a different product image. No added captions or price graphics, no watermark. Natural warm portrait product photography. Labelled illustrative in the website, not a claim of actual local packaging size.",
+    "originalGenerationFilename": "exec-04028bb1-c8a6-4a44-8773-fb8c568792bf.png"
+  },
+  {
+    "id": 325,
+    "name": "Red Bull Sandia",
+    "ref": "279.webp",
+    "out": "ref-325",
+    "refs": [
+      "279.webp"
+    ],
+    "mode": "soft",
+    "prompt": "Use case: product-mockup. One illustrative photorealistic menu image for \"Red Bull Sandia\". Use the supplied cola/soda image ONLY for composition and the dark warm wooden bar background. Completely replace its foreground soda and can with the named product's appropriate familiar can presentation and a glass of ice. Red Bull Watermelon/Sandía Red Edition red can. Avoid keeping a Coca-Cola or regular Sprite can in a different product image. No added captions or price graphics, no watermark. Natural warm portrait product photography. Labelled illustrative in the website, not a claim of actual local packaging size.",
+    "originalGenerationFilename": "exec-4393a553-f2de-48fb-8be3-c13be448ea18.png"
+  },
+  {
+    "id": 346,
+    "name": "Shots Tequila Nacional",
+    "spec": "One small clear shot glass with clear spirit, no bottle and no garnish.",
+    "out": "ref-346",
+    "refs": [
+      "235.webp"
+    ],
+    "mode": "drink",
+    "prompt": "Use case: product-mockup. One natural portrait illustrative menu image of \"Shots Tequila Nacional\". One small clear shot glass with clear spirit, no bottle and no garnish. Use supplied image only for the rustic wooden bar, warm side light, pineapple in the background and shallow depth of field. Remove its blue cocktail completely. No blue liquid, no unlisted accompaniments, no branding or text, no watermark. Professional realistic restobar drink photography; expressly illustrative, not evidence of an actual restaurant recipe or portion.",
+    "originalGenerationFilename": "exec-e9f4ac0e-3a15-470b-a5d5-b26c78ac898b.png"
+  },
+  {
+    "id": 348,
+    "name": "Shot Jagermeister",
+    "spec": "One small shot glass with dark brown herbal liqueur, no branded bottle, no garnish.",
+    "out": "ref-348",
+    "refs": [
+      "235.webp"
+    ],
+    "mode": "drink",
+    "prompt": "Use case: product-mockup. One natural portrait illustrative menu image of \"Shot Jagermeister\". One small shot glass with dark brown herbal liqueur, no branded bottle, no garnish. Use supplied image only for the rustic wooden bar, warm side light, pineapple in the background and shallow depth of field. Remove its blue cocktail completely. No blue liquid, no unlisted accompaniments, no branding or text, no watermark. Professional realistic restobar drink photography; expressly illustrative, not evidence of an actual restaurant recipe or portion.",
+    "originalGenerationFilename": "exec-6992125e-0138-4dec-9a54-35768c54c192.png"
+  },
+  {
+    "id": 468,
+    "name": "Corto Baileys",
+    "spec": "One low short glass of smooth pale beige cream liqueur over clear ice, no coffee swirl or other toppings, no branded bottle.",
+    "out": "ref-468",
+    "refs": [
+      "235.webp"
+    ],
+    "mode": "drink",
+    "prompt": "Use case: product-mockup. One natural portrait illustrative menu image of \"Corto Baileys\". One low short glass of smooth pale beige cream liqueur over clear ice, no coffee swirl or other toppings, no branded bottle. Use supplied image only for the rustic wooden bar, warm side light, pineapple in the background and shallow depth of field. Remove its blue cocktail completely. No blue liquid, no unlisted accompaniments, no branding or text, no watermark. Professional realistic restobar drink photography; expressly illustrative, not evidence of an actual restaurant recipe or portion.",
+    "originalGenerationFilename": "exec-668b3d1e-c7d2-42f1-bdbe-fb34391c395a.png"
+  },
+  {
+    "id": 437,
+    "name": "Fernet Branca Cola",
+    "spec": "One tall glass with ice and dark cola-colored liquid. No visible bottle, can, garnish or extra ingredients.",
+    "out": "ref-437",
+    "refs": [
+      "235.webp"
+    ],
+    "mode": "drink",
+    "prompt": "Use case: product-mockup. One natural portrait illustrative menu image of \"Fernet Branca Cola\". One tall glass with ice and dark cola-colored liquid. No visible bottle, can, garnish or extra ingredients. Use supplied image only for the rustic wooden bar, warm side light, pineapple in the background and shallow depth of field. Remove its blue cocktail completely. No blue liquid, no unlisted accompaniments, no branding or text, no watermark. Professional realistic restobar drink photography; expressly illustrative, not evidence of an actual restaurant recipe or portion.",
+    "originalGenerationFilename": "exec-fa4c855f-3ac2-4696-bddb-080385128273.png"
+  },
+  {
+    "id": 464,
+    "name": "Kunstmann Torobayo",
+    "ref": "brand-torobayo.webp",
+    "out": "brand-scene-464",
+    "refs": [
+      "brand-torobayo.webp",
+      "235.webp"
+    ],
+    "mode": "brand",
+    "prompt": "Use case: compositing. First image is the exact real packaging of \"Kunstmann Torobayo\" to preserve, including bottle shape, cap, label colors and all branding. Remove its white background and any separate infographic sidebar outside the bottle; keep the bottle itself unchanged. Second image is the rustic warm dark cocktail-bar STYLE reference only: wood table, amber low light, distant blurred bottles. Remove its blue drink and pineapple from the foreground. Place the exact first bottle on that wooden bar with natural contact shadow. No extra drinks, words, logos or watermark. Preserve the original bottle label, no redesign. One portrait product photograph.",
+    "originalGenerationFilename": "exec-64f02236-9cab-4ea6-bce7-1b543d3de11d.png"
+  },
+  {
+    "id": 333,
+    "name": "Corona 0° 330cc",
+    "ref": "brand-corona-zero.webp",
+    "out": "brand-scene-333",
+    "refs": [
+      "brand-corona-zero.webp",
+      "235.webp"
+    ],
+    "mode": "brand",
+    "prompt": "Use case: compositing. First image is the exact real packaging of \"Corona 0° 330cc\" to preserve, including bottle shape, cap, label colors and all branding. Remove its white background and any separate infographic sidebar outside the bottle; keep the bottle itself unchanged. Second image is the rustic warm dark cocktail-bar STYLE reference only: wood table, amber low light, distant blurred bottles. Remove its blue drink and pineapple from the foreground. Place the exact first bottle on that wooden bar with natural contact shadow. No extra drinks, words, logos or watermark. Preserve the original bottle label, no redesign. One portrait product photograph.",
+    "originalGenerationFilename": "exec-eecd4136-0c99-44a9-bc39-c61d25b2c3ba.png"
+  },
+  {
+    "id": 474,
+    "name": "Mistral Nobel Cristalino",
+    "ref": "brand-cristalino.webp",
+    "out": "brand-scene-474",
+    "refs": [
+      "brand-cristalino.webp",
+      "235.webp"
+    ],
+    "mode": "brand",
+    "prompt": "Use case: compositing. First image is the exact real packaging of \"Mistral Nobel Cristalino\" to preserve, including bottle shape, cap, label colors and all branding. Remove its white background and any separate infographic sidebar outside the bottle; keep the bottle itself unchanged. Second image is the rustic warm dark cocktail-bar STYLE reference only: wood table, amber low light, distant blurred bottles. Remove its blue drink and pineapple from the foreground. Place the exact first bottle on that wooden bar with natural contact shadow. No extra drinks, words, logos or watermark. Preserve the original bottle label, no redesign. One portrait product photograph.",
+    "originalGenerationFilename": "exec-ac803a3e-1d3e-4dee-84f0-e2cb5593ba73.png"
+  },
+  {
+    "id": 353,
+    "out": "ref-353",
+    "name": "Base Chelada",
+    "refs": [
+      "235.webp"
+    ],
+    "mode": "base",
+    "spec": "One EMPTY tall beer glass with a simple lightly salted rim, no beer bottle, no beer poured, no extra food props. Illustrative base presentation only.",
+    "prompt": "Use case: product-mockup. One natural portrait illustrative menu image of \"Base Chelada\". One EMPTY tall beer glass with a simple lightly salted rim, no beer bottle, no beer poured, no extra food props. Illustrative base presentation only. Use supplied image only for the rustic wooden bar, warm side light, pineapple in the background and shallow depth of field. Remove its blue cocktail completely. No blue liquid, no unlisted accompaniments, no branding or text, no watermark. Professional realistic restobar drink photography; expressly illustrative, not evidence of an actual restaurant recipe or portion.",
+    "originalGenerationFilename": "exec-d824f6e1-2d95-44bd-9897-57a0ccbb5b43.png"
+  },
+  {
+    "id": 352,
+    "out": "ref-352",
+    "name": "Base Michelada",
+    "refs": [
+      "235.webp"
+    ],
+    "mode": "base",
+    "spec": "One EMPTY tall beer glass with a subtle reddish seasoned rim as a classical illustrative reference, no beer bottle, no beer poured, no other food props. Do not imply a specific local recipe.",
+    "prompt": "Use case: product-mockup. One natural portrait illustrative menu image of \"Base Michelada\". One EMPTY tall beer glass with a subtle reddish seasoned rim as a classical illustrative reference, no beer bottle, no beer poured, no other food props. Do not imply a specific local recipe. Use supplied image only for the rustic wooden bar, warm side light, pineapple in the background and shallow depth of field. Remove its blue cocktail completely. No blue liquid, no unlisted accompaniments, no branding or text, no watermark. Professional realistic restobar drink photography; expressly illustrative, not evidence of an actual restaurant recipe or portion.",
+    "originalGenerationFilename": "exec-5e6ef3da-8dc5-49a6-bd95-cf01c8dfdfa8.png"
+  }
+]
