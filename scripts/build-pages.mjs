@@ -1,6 +1,7 @@
 // Construye la versión estática para GitHub Pages en pages-dist/.
 // GitHub Pages no ejecuta el Worker: no hay stock en vivo, horarios, fotos del panel ni /admin.
-// Uso: node scripts/build-pages.mjs [--base nombre-del-repo]
+// Uso: node scripts/build-pages.mjs [--base nombre-del-repo] [--domain dominio.cl]
+// Con --domain se escribe el archivo CNAME y la base queda en la raíz del dominio.
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
@@ -10,6 +11,11 @@ const baseArg = process.argv.indexOf('--base');
 // Se indica solo el nombre del repo (sin barras) para evitar que Git Bash lo convierta en una ruta de Windows.
 const repoName = baseArg > 0 ? process.argv[baseArg + 1].replace(/^\/+|\/+$/g, '') : '';
 const BASE = repoName ? `/${repoName}/` : '/';
+const domainArg = process.argv.indexOf('--domain');
+const domain = domainArg > 0 ? process.argv[domainArg + 1].trim().toLowerCase() : '';
+if (domain && !/^[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/.test(domain)) {
+  throw new Error('Dominio no válido: ' + domain);
+}
 const ADMIN_FILES = new Set(['admin.html', 'admin.js', 'admin.css']);
 
 await fs.rm(OUT, { recursive: true, force: true });
@@ -45,6 +51,7 @@ const notFound = `<!doctype html>
 `;
 await fs.writeFile(path.join(OUT, '404.html'), notFound);
 await fs.writeFile(path.join(OUT, '.nojekyll'), '');
+if (domain) await fs.writeFile(path.join(OUT, 'CNAME'), domain + '\n');
 
 const files = (await fs.readdir(OUT, { recursive: true })).length;
 console.log(`Versión estática creada en ${OUT}/ (${files} entradas), base ${BASE}`);

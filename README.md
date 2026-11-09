@@ -32,4 +32,6 @@ Consultar LEEME_PRIMERO.md y CLAUDE.md. Se ajustó únicamente esta copia de ent
 
 ## Demostración en GitHub Pages
 
-La rama `gh-pages` contiene una versión **estática** de la interfaz (`npm run build:pages` genera `pages-dist/`). GitHub Pages no ejecuta el Worker: no hay `/admin`, stock en vivo, horarios ni fotos cargadas desde el panel, y el pie de página lo indica. Sigue siendo `noindex`. La demo privada con servidor no cambia. Auditoría y mejoras pendientes: [AUDITORIA.md](AUDITORIA.md).
+La rama `gh-pages` contiene una versión **estática** de la interfaz (`npm run build:pages` genera `pages-dist/`). GitHub Pages no ejecuta el Worker: no hay `/admin`, stock en vivo, horarios ni fotos cargadas desde el panel, y el pie de página lo indica. Sigue siendo `noindex`. La demo privada con servidor no cambia.
+
+**Dominio propio (`santaelenarestobar.cl`):** `npm run build:pages:dominio` genera `pages-dist/` con la base en la raíz y un archivo `CNAME`; su contenido se publica en la rama `gh-pages`. DNS: registros A de `@` hacia `185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`, y CNAME de `www` hacia `hacksthedreams-bit.github.io`. Para abrirla al público falta quitar `noindex` (meta en `public/index.html` y `public/robots.txt`) y el texto de demostración, con el visto bueno del restaurante. Auditoría y mejoras pendientes: [AUDITORIA.md](AUDITORIA.md).

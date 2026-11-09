@@ -8,6 +8,7 @@
     "validate": "node scripts/validate-artifact.mjs",
     "test": "node scripts/test-server.mjs",
     "build:pages": "node scripts/build-pages.mjs --base santa-elena-restobar",
+    "build:pages:dominio": "node scripts/build-pages.mjs --domain santaelenarestobar.cl",
     "pretest": "npm run build",
     "check": "npm test && npm run validate"
   },
