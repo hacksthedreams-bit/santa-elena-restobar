@@ -1,0 +1,375 @@
+/* ──────────────────────────────────────────────────────────────────────────
+   Santa Elena Restobar · Retoque visual
+   Hero, logo rectangular, reloj, redes y pulido de fichas.
+   Se carga después de upgrade.css. Sin recursos remotos (CSP: style-src 'self').
+   ────────────────────────────────────────────────────────────────────────── */
+:root {
+  --bronze: #c98b5a;
+  --bronze-soft: #e3b27d;
+  --cream: #f4e8d6;
+  --ink: #141315;
+}
+
+@keyframes se-spin { to { transform: rotate(360deg); } }
+@keyframes se-sheen { 0%, 100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+@keyframes se-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes se-pulse { 0% { box-shadow: 0 0 0 0 rgba(126, 212, 154, 0.45); } 100% { box-shadow: 0 0 0 10px rgba(126, 212, 154, 0); } }
+@keyframes se-rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+
+/* ── Botones ──────────────────────────────────────────────────────────── */
+.button.ghost {
+  background: transparent;
+  border: 1px solid rgba(223, 190, 134, 0.5);
+  color: var(--gold);
+}
+.button.ghost:hover { background: rgba(223, 190, 134, 0.1); border-color: var(--gold); }
+.button.primary { box-shadow: 0 10px 30px rgba(114, 40, 64, 0.45); }
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero2 {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: clamp(28px, 5vw, 60px) 0 clamp(64px, 8vw, 104px);
+}
+.hero2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(60% 55% at 80% 40%, rgba(201, 139, 90, 0.2), transparent 70%),
+    radial-gradient(48% 52% at 6% 0%, rgba(114, 40, 64, 0.5), transparent 70%),
+    radial-gradient(42% 42% at 100% 100%, rgba(114, 40, 64, 0.32), transparent 70%),
+    #141315;
+}
+.hero2::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-linear-gradient(115deg, transparent 0 46px, rgba(255, 255, 255, 0.022) 46px 47px);
+  -webkit-mask-image: linear-gradient(#000 20%, transparent 90%);
+  mask-image: linear-gradient(#000 20%, transparent 90%);
+  pointer-events: none;
+}
+.hero2-glow {
+  position: absolute;
+  z-index: -1;
+  width: 560px;
+  height: 560px;
+  right: -140px;
+  top: 6%;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, transparent, rgba(227, 178, 125, 0.22), transparent 60%, rgba(157, 63, 92, 0.2), transparent);
+  filter: blur(46px);
+  animation: se-spin 30s linear infinite;
+}
+.hero2-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  gap: clamp(32px, 5vw, 84px);
+  align-items: center;
+}
+.hero2-copy > * { animation: se-rise 0.8s both; }
+.hero2-copy > :nth-child(2) { animation-delay: 0.08s; }
+.hero2-copy > :nth-child(3) { animation-delay: 0.16s; }
+.hero2-copy > :nth-child(4) { animation-delay: 0.24s; }
+.hero2-copy > :nth-child(5) { animation-delay: 0.32s; }
+.hero2-copy > :nth-child(6) { animation-delay: 0.4s; }
+
+/* Logo original en formato rectangular: sin círculo ni recorte. */
+.hero2-logo {
+  display: block;
+  width: min(320px, 70%);
+  height: auto;
+  aspect-ratio: 2 / 1;
+  border-radius: 5px;
+  margin: 0 0 30px;
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(201, 139, 90, 0.25);
+}
+.hero2 .eyebrow { margin-bottom: 0; }
+.hero2 h1 {
+  font: 700 clamp(52px, 7vw, 96px) / 0.94 BarlowTitle, Impact, sans-serif;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  margin: 18px 0 24px;
+  color: var(--white);
+}
+.hero2 h1 em {
+  font-style: normal;
+  background: linear-gradient(100deg, #f6dcae, var(--bronze) 55%, #f6dcae);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: se-sheen 7s ease-in-out infinite;
+}
+.hero2-lead {
+  max-width: 31em;
+  margin: 0;
+  font-size: clamp(16px, 1.55vw, 19px);
+  line-height: 1.7;
+  color: #d9cfc9;
+}
+.hero2-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+.hero2-actions .button { min-width: 0; }
+.hero2-facts {
+  list-style: none;
+  margin: 44px 0 0;
+  padding: 22px 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  border-top: 1px solid rgba(223, 190, 134, 0.22);
+}
+.hero2-facts li { padding: 0 clamp(14px, 2.4vw, 30px); border-left: 1px solid rgba(223, 190, 134, 0.22); }
+.hero2-facts li:first-child { padding-left: 0; border-left: 0; }
+.hero2-facts strong {
+  display: block;
+  font: 700 clamp(22px, 2.4vw, 30px) / 1.1 BarlowTitle, Impact, sans-serif;
+  letter-spacing: 0.5px;
+  color: var(--gold);
+}
+.hero2-facts span {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: 0.4px;
+  color: #b9aea8;
+}
+
+/* Collage de platos: tabla principal en arco + dos tarjetas flotantes. */
+.hero2-visual { position: relative; padding: 14px 0 28px; }
+.hero2-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid rgba(223, 190, 134, 0.38);
+  background: #1b1518;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
+}
+.hero2-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.hero2-card:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 38px 80px rgba(0, 0, 0, 0.7); }
+.hero2-card:hover img { transform: scale(1.05); }
+.hero2-card:focus-visible { outline: 3px solid var(--gold); outline-offset: 5px; }
+.hero2-main {
+  width: 72%;
+  margin-left: auto;
+  aspect-ratio: 3 / 4.1;
+  border-radius: 999px 999px 26px 26px;
+}
+.hero2-main .hero-label { top: 62px; left: 50%; right: auto; bottom: auto; transform: translateX(-50%); white-space: nowrap; z-index: 2; }
+.hero2-tag {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 60px 22px 22px 34%;
+  background: linear-gradient(transparent, rgba(12, 9, 10, 0.94) 72%);
+}
+.hero2-tag-kicker { font-size: 10px; font-weight: 700; letter-spacing: 2.4px; color: var(--gold); }
+.hero2-tag strong { font: 700 clamp(26px, 3vw, 36px) / 1.05 BarlowTitle, Impact, sans-serif; color: var(--white); }
+.hero2-tag .hero-price { display: block; font: 700 24px / 1.2 BarlowTitle, Impact, sans-serif; letter-spacing: 0.5px; color: var(--bronze-soft); }
+.hero2-tag em { margin-top: 4px; font-style: normal; font-size: 13px; color: #e6d9cc; }
+.hero2-side {
+  position: absolute;
+  z-index: 2;
+  width: 34%;
+  aspect-ratio: 3 / 4.2;
+  border-radius: 20px;
+  animation: se-float 7s ease-in-out infinite;
+}
+.hero2-side-a { left: 0; top: 16%; }
+.hero2-side-b { left: 8%; bottom: 0; animation-delay: -3.5s; width: 38%; aspect-ratio: 4 / 3.6; }
+.hero2-side-name {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 26px 12px 11px;
+  font: 700 18px / 1.1 BarlowTitle, Impact, sans-serif;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--white);
+  background: linear-gradient(transparent, rgba(12, 9, 10, 0.92));
+}
+.hero2-seal {
+  position: absolute;
+  z-index: 3;
+  width: 112px;
+  height: 112px;
+  left: calc(28% - 30px);
+  top: -6px;
+  padding: 0;
+  border-radius: 50%;
+  color: var(--gold);
+  background: radial-gradient(#1f171b, #141315);
+  border: 1px solid rgba(223, 190, 134, 0.45);
+  box-shadow: 0 0 0 5px #141315, 0 16px 34px rgba(0, 0, 0, 0.5);
+  stroke-width: 1.4;
+}
+.hero2-seal text { fill: currentColor; stroke: none; font: 600 9.6px Outfit, Arial, sans-serif; }
+.hero2-seal .seal-ring { transform-origin: 60px 60px; animation: se-spin 26s linear infinite; }
+.hero2-seal .seal-glass { stroke: var(--bronze-soft); stroke-width: 2; }
+
+/* Cinta de marca más fina. */
+.brand-ribbon { border-block: 1px solid rgba(223, 190, 134, 0.2); background: linear-gradient(90deg, #1a1215, #221518 50%, #1a1215); }
+
+/* ── Reloj ────────────────────────────────────────────────────────────── */
+.clock2 {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(24px, 3.2vw, 38px);
+  border: 1px solid rgba(201, 139, 90, 0.55);
+  border-radius: 24px;
+  background:
+    radial-gradient(120% 90% at 0% 0%, rgba(114, 40, 64, 0.55), transparent 62%),
+    radial-gradient(70% 70% at 100% 100%, rgba(201, 139, 90, 0.14), transparent 70%),
+    #1b1417;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.45);
+}
+.clock2-body { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 18px clamp(20px, 3vw, 34px); margin-top: 20px; }
+.clock2-face { width: clamp(150px, 14vw, 186px); height: auto; flex: none; filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55)); }
+.clock2-face .c-ring { fill: #1a1310; stroke: var(--bronze); stroke-width: 2.4; }
+.clock2-face .c-ring-in { fill: #221813; stroke: rgba(201, 139, 90, 0.35); stroke-width: 0.8; }
+.clock2-face #clock-ticks line { stroke: #86675a; stroke-width: 0.9; }
+.clock2-face #clock-ticks line.major { stroke: var(--bronze-soft); stroke-width: 2.4; }
+.clock2-face .c-brand { fill: var(--bronze); stroke: none; font: 600 7.4px Outfit, Arial, sans-serif; letter-spacing: 2.4px; }
+.clock2-face .c-sub { fill: #8f7f76; stroke: none; font: 500 5.6px Outfit, Arial, sans-serif; letter-spacing: 2.6px; }
+.clock2-face #hand-h line { stroke: var(--cream); stroke-width: 4.4; }
+.clock2-face #hand-m line { stroke: var(--cream); stroke-width: 2.8; }
+.clock2-face #hand-s line { stroke: #d2566f; stroke-width: 1.2; }
+.clock2-face .c-pin { fill: var(--bronze-soft); stroke: #1a1310; stroke-width: 1.5; }
+.clock2-face .c-pin-in { fill: #1a1310; stroke: none; }
+.clock2-digital { min-width: 0; }
+.clock2-digital time {
+  display: block;
+  margin: 0;
+  font: 700 clamp(44px, 4.6vw, 64px) / 1 BarlowTitle, Impact, sans-serif;
+  letter-spacing: 1px;
+  color: var(--white);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.clock2-digital .sec { margin-left: 4px; font-size: 0.42em; letter-spacing: 1px; color: var(--bronze-soft); }
+.clock2-digital p { margin: 10px 0 0; font-size: 15px; text-transform: none; color: #dccbc4; }
+.clock2-digital .timezone-label { display: block; margin-top: 8px; }
+.clock2 .opening-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 24px;
+  padding: 10px 18px;
+  border: 1px solid rgba(223, 190, 134, 0.38);
+  border-radius: 999px;
+  background: rgba(223, 190, 134, 0.07);
+  font-size: 14px;
+  color: var(--gold);
+}
+.clock2 .opening-status::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: var(--bronze-soft); flex: none; }
+.clock2 .opening-status.is-open { color: #bfe6c9; border-color: rgba(126, 212, 154, 0.45); background: rgba(126, 212, 154, 0.08); }
+.clock2 .opening-status.is-open::before { background: #7ed49a; animation: se-pulse 1.8s ease-out infinite; }
+
+/* Bloque "horario por confirmar" con más presencia. */
+.hours-pending { border: 1px solid rgba(201, 139, 90, 0.4); border-style: solid; background: linear-gradient(160deg, #211a1e, #181316); border-radius: 18px; }
+.hours-pending svg { color: var(--bronze-soft); }
+
+/* ── Redes y contacto ─────────────────────────────────────────────────── */
+.connect-section { padding: 18px 0 clamp(56px, 7vw, 92px); }
+.connect-head h2 { margin: 8px 0 26px; font: 700 clamp(34px, 5vw, 58px) / 1 BarlowTitle, Impact, sans-serif; text-transform: uppercase; letter-spacing: 0.5px; }
+.connect-head h2 em { font-style: normal; color: var(--gold); }
+.connect-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.connect-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 92px;
+  padding: 18px 22px;
+  border: 1px solid #3b3437;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #211b1f, #171416);
+  transition: transform 0.3s, border-color 0.3s, background 0.3s;
+}
+.connect-card > svg {
+  width: 54px;
+  height: 54px;
+  padding: 14px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 139, 90, 0.5);
+  background: rgba(201, 139, 90, 0.08);
+  color: var(--bronze-soft);
+}
+.connect-card span { display: block; min-width: 0; flex: 1; }
+.connect-card strong { display: block; font-size: 18px; color: var(--white); }
+.connect-card small { display: block; margin-top: 2px; font-size: 13px; line-height: 1.4; color: #bdb1ab; overflow-wrap: anywhere; }
+.connect-card b { font-size: 20px; color: var(--gold); transition: transform 0.3s; }
+.connect-card:hover { transform: translateY(-4px); border-color: var(--bronze); background: linear-gradient(160deg, #2a2025, #1a1517); }
+.connect-card:hover b { transform: translate(3px, -3px); }
+.connect-card:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+
+/* Pie con enlaces directos */
+.source-note a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(223, 190, 134, 0.4); }
+
+/* ── Fichas: etiquetas de imagen más discretas ────────────────────────── */
+.image-label {
+  background: rgba(15, 12, 13, 0.72);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(223, 190, 134, 0.28);
+  color: #e8dccd;
+  letter-spacing: 0.5px;
+}
+
+/* ── Adaptación móvil ─────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero2 { padding-bottom: 56px; }
+  .hero2-grid { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .hero2-copy { display: contents; }
+  .hero2-logo { order: 1; width: min(260px, 72%); margin-bottom: 24px; }
+  .hero2 .eyebrow { order: 2; }
+  .hero2 h1 { order: 3; font-size: clamp(54px, 17vw, 84px); margin: 14px 0 18px; }
+  .hero2-lead { order: 4; }
+  .hero2-actions { order: 5; margin-top: 24px; }
+  .hero2-visual { order: 6; margin-top: 40px; }
+  .hero2-facts { order: 7; margin-top: 30px; }
+  .hero2-main { width: 76%; }
+  .hero2-side { width: 33%; }
+  .hero2-side-b { width: 38%; }
+  .hero2-seal { width: 92px; height: 92px; left: calc(24% - 20px); }
+  .hero2-glow { width: 360px; height: 360px; right: -140px; top: 24%; }
+  .connect-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+@media (max-width: 560px) {
+  .hero2-actions .button { flex: 1 1 100%; width: 100%; }
+  .hero2-facts { grid-template-columns: 1fr; gap: 14px; padding-top: 18px; }
+  .hero2-facts li { padding: 0; border-left: 0; display: flex; align-items: baseline; gap: 12px; }
+  .hero2-facts strong { flex: none; min-width: 108px; font-size: 24px; }
+  .hero2-facts span { margin-top: 0; }
+  .hero2-tag { padding: 48px 14px 18px 36%; }
+  .hero2-tag strong { font-size: 24px; }
+  .hero2-tag em { font-size: 12px; }
+  .hero2-side-name { font-size: 15px; padding: 20px 9px 9px; }
+  .clock2-body { flex-direction: column; text-align: center; gap: 18px; }
+  .clock2-face { width: min(210px, 62vw); }
+  .clock2 .opening-status { align-self: center; max-width: 100%; text-align: left; }
+  .clock2 { text-align: center; }
+  .connect-card { padding: 16px 18px; }
+}
+@media (max-width: 380px) {
+  .hero2 h1 { font-size: 52px; }
+  .hero2-main { width: 80%; }
+  .hero2-seal { width: 80px; height: 80px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero2-copy > *,
+  .hero2-glow,
+  .hero2 h1 em,
+  .hero2-side,
+  .hero2-seal .seal-ring,
+  .clock2 .opening-status.is-open::before { animation: none !important; }
+  .hero2-card, .hero2-card img, .connect-card, .connect-card b { transition: none; }
+  .hero2-card:hover, .hero2-card:hover img, .connect-card:hover { transform: none; }
+}

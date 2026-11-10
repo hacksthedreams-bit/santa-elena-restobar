@@ -28,7 +28,7 @@ const replaceOnce = (from, to) => {
 };
 
 // Versiona CSS/JS para invalidar la caché, igual que scripts/build.mjs.
-for (const name of ['style.css', 'upgrade.css', 'app.js']) {
+for (const name of ['style.css', 'upgrade.css', 'polish.css', 'app.js']) {
   const hash = createHash('sha256')
     .update(await fs.readFile(path.join(OUT, name)))
     .digest('hex')

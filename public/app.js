@@ -41,6 +41,8 @@ let menu,
   detailPushed = false,
   detailId = null,
   toastTimer;
+const WA_NUMBER = '56967119121';
+const waLink = (text) => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
 const dialog = $('#product-dialog'),
   catNames = {
     'Bebidas.': 'Bebidas',
@@ -294,7 +296,7 @@ function detailHTML(p) {
               : kind === 'manufacturer'
                 ? 'Imagen de referencia del producto. El servicio y la añada se confirman con el equipo.'
                 : '';
-  return `${media(p, true)}<div class="detail-inner"><div class="eyebrow">${esc(groupFor(p).name)} · ${esc(catLabel(p.productCategoryId))}</div><h2 id="detail-name">${esc(p.name)}</h2><div class="detail-pricebar"><span class="detail-price">${p.price > 0 ? money(p.price) : 'Precio por confirmar'}</span>${available(p) ? '' : '<span class="sold-out badge">Sin stock</span>'}</div><p class="description">${esc(p.displayDescription)}</p>${p.descriptionKind === 'name' ? '<p class="photo-disclosure">La carta no detalla una receta completa para este producto. Consulta ingredientes con el equipo.</p>' : ''}${p.descriptionSource ? `<p class="photo-disclosure">Nota del fabricante: <a href="${esc(p.descriptionSource)}" target="_blank" rel="noopener noreferrer">ver referencia ↗</a></p>` : ''}${optionGroups(p)}${disclosure ? `<aside class="image-note"><strong>Sobre la imagen</strong><p>${disclosure}</p></aside>` : ''}<p class="detail-meta">${p.price > 0 ? 'Precio publicado en pesos chilenos.' : 'La fuente registra $0. Consulta el precio antes de pedir.'}</p><button class="favorite-in-detail" data-save="${p.id}" aria-pressed="${saved.has(p.id)}">${saved.has(p.id) ? '♥ Guardado en' : '♡ Guardar en'} mis favoritos</button><div class="detail-sticky"><a class="button primary" href="${menu.whatsapp}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a></div></div>`;
+  return `${media(p, true)}<div class="detail-inner"><div class="eyebrow">${esc(groupFor(p).name)} · ${esc(catLabel(p.productCategoryId))}</div><h2 id="detail-name">${esc(p.name)}</h2><div class="detail-pricebar"><span class="detail-price">${p.price > 0 ? money(p.price) : 'Precio por confirmar'}</span>${available(p) ? '' : '<span class="sold-out badge">Sin stock</span>'}</div><p class="description">${esc(p.displayDescription)}</p>${p.descriptionKind === 'name' ? '<p class="photo-disclosure">La carta no detalla una receta completa para este producto. Consulta ingredientes con el equipo.</p>' : ''}${p.descriptionSource ? `<p class="photo-disclosure">Nota del fabricante: <a href="${esc(p.descriptionSource)}" target="_blank" rel="noopener noreferrer">ver referencia ↗</a></p>` : ''}${optionGroups(p)}${disclosure ? `<aside class="image-note"><strong>Sobre la imagen</strong><p>${disclosure}</p></aside>` : ''}<p class="detail-meta">${p.price > 0 ? 'Precio publicado en pesos chilenos.' : 'La fuente registra $0. Consulta el precio antes de pedir.'}</p><button class="favorite-in-detail" data-save="${p.id}" aria-pressed="${saved.has(p.id)}">${saved.has(p.id) ? '♥ Guardado en' : '♡ Guardar en'} mis favoritos</button><div class="detail-sticky"><a class="button primary" href="${esc(waLink(`Hola Santa Elena Restobar 👋 Vengo desde la carta digital y quisiera consultar por: ${p.name}.`))}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a></div></div>`;
 }
 function showProduct(id, push = true) {
   const p = productMap.get(+id);
@@ -404,22 +406,57 @@ function opening() {
   }
   return { text: 'Consulta la próxima apertura con el equipo', open: false };
 }
+const clockFormat = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'America/Santiago',
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hourCycle: 'h23',
+});
+const dateFormat = new Intl.DateTimeFormat('es-CL', {
+  timeZone: 'America/Santiago',
+  weekday: 'long',
+  day: 'numeric',
+  month: 'long',
+});
+// Marcas del reloj analógico: se dibujan una sola vez.
+function buildClockFace() {
+  const g = document.getElementById('clock-ticks');
+  if (!g || g.childElementCount) return;
+  const NS = 'http://www.w3.org/2000/svg';
+  for (let i = 0; i < 60; i++) {
+    const major = i % 5 === 0,
+      a = (i * Math.PI) / 30,
+      r1 = major ? 76 : 83,
+      r2 = 87,
+      l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', (100 + Math.sin(a) * r1).toFixed(2));
+    l.setAttribute('y1', (100 - Math.cos(a) * r1).toFixed(2));
+    l.setAttribute('x2', (100 + Math.sin(a) * r2).toFixed(2));
+    l.setAttribute('y2', (100 - Math.cos(a) * r2).toFixed(2));
+    if (major) l.setAttribute('class', 'major');
+    g.appendChild(l);
+  }
+}
+function setHand(id, deg) {
+  document.getElementById(id)?.setAttribute('transform', `rotate(${deg.toFixed(2)} 100 100)`);
+}
 function clock() {
-  const n = new Date();
-  $('#live-clock').textContent = new Intl.DateTimeFormat('es-CL', {
-    timeZone: 'America/Santiago',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hourCycle: 'h23',
-  }).format(n);
-  $('#live-clock').dateTime = n.toISOString();
-  $('#live-date').textContent = new Intl.DateTimeFormat('es-CL', {
-    timeZone: 'America/Santiago',
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-  }).format(n);
+  const n = new Date(),
+    t = {};
+  for (const x of clockFormat.formatToParts(n)) t[x.type] = x.value;
+  const h = +t.hour,
+    m = +t.minute,
+    sec = +t.second,
+    el = $('#live-clock');
+  el.querySelector('.hm').textContent = `${t.hour}:${t.minute}`;
+  el.querySelector('.sec').textContent = `:${t.second}`;
+  el.dateTime = n.toISOString();
+  setHand('hand-h', ((h % 12) + m / 60 + sec / 3600) * 30);
+  setHand('hand-m', (m + sec / 60) * 6);
+  setHand('hand-s', sec * 6);
+  const dateText = dateFormat.format(n);
+  $('#live-date').textContent = dateText.charAt(0).toUpperCase() + dateText.slice(1);
   const s = opening();
   $('#opening-status').textContent = s.text;
   $('#opening-status').classList.toggle('is-open', s.open);
@@ -618,6 +655,7 @@ try {
   if (Array.isArray(f)) saved = new Set(f.filter(Number.isInteger));
 } catch {}
 prefs();
+buildClockFace();
 clock();
 setInterval(clock, 1000);
 (async () => {
@@ -677,6 +715,17 @@ setInterval(clock, 1000);
       $('#hero-price').textContent = hp.price > 0 ? money(hp.price) : 'Precio por confirmar';
       $('#hero-price').hidden = false;
     }
+    for (const [sel, id] of [
+      ['#hero-side-a', 235],
+      ['#hero-side-b', 426],
+    ]) {
+      const sp = productMap.get(id);
+      if (sp && $(sel)) {
+        $(sel).src = photo(sp);
+        $(sel).alt = sp.name;
+      }
+    }
+    if ($('#hero-count')) $('#hero-count').textContent = menu.products.length;
     const id = new URL(location.href).searchParams.get('producto');
     if (id) showProduct(id, false);
     if (!reduceMotion() && 'IntersectionObserver' in window) {

@@ -35,3 +35,13 @@ Consultar LEEME_PRIMERO.md y CLAUDE.md. Se ajustó únicamente esta copia de ent
 La rama `gh-pages` contiene una versión **estática** de la interfaz (`npm run build:pages` genera `pages-dist/`). GitHub Pages no ejecuta el Worker: no hay `/admin`, stock en vivo, horarios ni fotos cargadas desde el panel, y el pie de página lo indica. Sigue siendo `noindex`. La demo privada con servidor no cambia.
 
 **Dominio propio (`santaelenarestobar.cl`):** `npm run build:pages:dominio` genera `pages-dist/` con la base en la raíz y un archivo `CNAME`; su contenido se publica en la rama `gh-pages`. DNS: registros A de `@` hacia `185.199.108.153`, `185.199.109.153`, `185.199.110.153` y `185.199.111.153`, y CNAME de `www` hacia `hacksthedreams-bit.github.io`. Para abrirla al público falta quitar `noindex` (meta en `public/index.html` y `public/robots.txt`) y el texto de demostración, con el visto bueno del restaurante. Auditoría y mejoras pendientes: [AUDITORIA.md](AUDITORIA.md).
+
+## Retoque visual (10 de noviembre de 2026)
+
+- **Logo:** se usa el logo original en formato rectangular (`assets/logo-wide.webp`, derivado de `ambiente.webp`), sin recorte circular.
+- **Hero:** `public/polish.css` (se carga después de `upgrade.css`) define el nuevo hero con tres tarjetas (Tabla La Segunda, Laguna Azul y Tabla Las Alitas Club), sello giratorio y datos rápidos. Las tarjetas abren la ficha del producto.
+- **Reloj:** esfera analógica en SVG (marcas y manecillas se dibujan en `app.js`) más hora digital con segundos, fecha y estado de apertura, todo en zona America/Santiago.
+- **Redes y enlaces:** se eliminó el enlace a Linktree (mostraba publicidad ajena) y los atajos `wa.link` y `maps.app.goo.gl` (redirigían). Ahora WhatsApp es `wa.me/56967119121` con un mensaje de cliente (en las fichas incluye el nombre del producto), Google Maps usa coordenadas y hay una sección “Estamos a un clic”. El número es el que resolvía el enlace oficial `wa.link/7uks2v`; si cambia, se edita en `public/index.html` y en `WA_NUMBER` de `app.js`.
+- **Descripciones:** `npm run polish:menu` (`scripts/copy.mjs`) reescribe solo las 150 descripciones que la carta no trae (`descriptionKind: "name"`). Usa únicamente datos del nombre del producto (sabor, marca, formato) y no inventa recetas ni ingredientes. Es idempotente y debe ejecutarse después de `scripts/enrich.mjs` si alguna vez se vuelve a correr. No modifica ids, nombres, precios ni descripciones originales.
+- **Botellas de marca:** `python scripts/stage-bottles.py` (Pillow + numpy) compone las botellas recortadas sobre un escenario de barra y genera `assets/stage-*.webp`. Siguen identificadas como “Imagen de marca”; el producto 290 conserva su imagen publicada con el fondo reemplazado.
+
