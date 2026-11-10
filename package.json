@@ -10,6 +10,8 @@
     "build:pages": "node scripts/build-pages.mjs --base santa-elena-restobar",
     "build:pages:dominio": "node scripts/build-pages.mjs --domain santaelenarestobar.cl",
     "polish:menu": "node scripts/copy.mjs",
+    "build:pages:publico": "node scripts/build-pages.mjs --domain santaelenarestobar.cl --public",
+    "thumbs": "python scripts/make-thumbs.py",
     "pretest": "npm run build",
     "check": "npm test && npm run validate"
   },

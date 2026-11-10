@@ -78,14 +78,26 @@ const labels = {
   ambient: 'Ambientación digital',
   reference: 'Presentación referencial',
 };
+// Las listas usan una copia liviana (assets/sm/); si no existe, se vuelve a la imagen completa.
+// Solo en la versión estática: el Worker privado no incluye las miniaturas para no engordar el artefacto.
+const thumb = (s) => (STATIC_MODE && /^assets\/[^/]+\.webp$/.test(s) ? s.replace('assets/', 'assets/sm/') : s);
+document.addEventListener(
+  'error',
+  (e) => {
+    const i = e.target;
+    if (i instanceof HTMLImageElement && i.dataset.full && i.getAttribute('src') !== i.dataset.full) i.src = i.dataset.full;
+  },
+  true,
+);
 function media(p, detail = false) {
   const kind = imageKind(p),
     src = photo(p),
+    shown = detail ? src : thumb(src),
     label = labels[kind];
-  return `<div class="${detail ? 'detail-photo-wrapper' : 'product-media'}${p.brandBottle && kind === 'manufacturer' ? ' brand-bottle' : ''}"><img class="${detail ? 'detail-photo' : 'product-photo'}" src="${esc(src)}" alt="${esc(kind === 'category' ? 'Referencia visual de ' + groupFor(p).name : p.name)}" width="800" height="1000" ${detail ? '' : 'loading="lazy" decoding="async"'}>${label ? `<span class="image-label">${label}</span>` : ''}</div>`;
+  return `<div class="${detail ? 'detail-photo-wrapper' : 'product-media'}${p.brandBottle && kind === 'manufacturer' ? ' brand-bottle' : ''}"><img class="${detail ? 'detail-photo' : 'product-photo'}" src="${esc(shown)}"${shown !== src ? ` data-full="${esc(src)}"` : ''} alt="${esc(kind === 'category' ? 'Referencia visual de ' + groupFor(p).name : p.name)}" width="800" height="1000" ${detail ? '' : 'loading="lazy" decoding="async"'}>${label ? `<span class="image-label">${label}</span>` : ''}</div>`;
 }
 function productCard(p) {
-  return `<article class="product${available(p) ? '' : ' unavailable'}" data-product="${p.id}">${media(p)}<div class="product-body"><button class="heart-button" data-save="${p.id}" aria-pressed="${saved.has(p.id)}" aria-label="${saved.has(p.id) ? 'Quitar de' : 'Guardar en'} mis favoritos: ${esc(p.name)}">${saved.has(p.id) ? '♥' : '♡'}</button><div class="product-meta"><span>${esc(catLabel(p.productCategoryId))}</span>${available(p) ? '' : '<span class="sold-out">Sin stock</span>'}</div><h4>${esc(p.name)}</h4><p>${esc(p.displayDescription)}</p><div class="product-bottom"><span class="product-price${p.price > 0 ? '' : ' unconfirmed'}">${p.price > 0 ? money(p.price) : 'Precio por confirmar'}</span><button class="detail-button" data-open="${p.id}" aria-label="Ver detalle de ${esc(p.name)}">Ver detalle <span aria-hidden="true">↗</span></button></div></div></article>`;
+  return `<article class="product${available(p) ? '' : ' unavailable'}" data-product="${p.id}">${media(p)}<div class="product-body"><button class="heart-button" data-save="${p.id}" aria-pressed="${saved.has(p.id)}" aria-label="${saved.has(p.id) ? 'Quitar de' : 'Guardar en'} mis favoritos: ${esc(p.name)}">${saved.has(p.id) ? '♥' : '♡'}</button><div class="product-meta"><span>${esc(catLabel(p.productCategoryId))}</span>${available(p) ? '' : '<span class="sold-out">Sin stock</span>'}</div><h4>${esc(p.name)}</h4><p>${esc(p.displayDescription)}</p><div class="product-bottom"><span class="product-price${p.price > 0 ? '' : ' unconfirmed'}">${p.price > 0 ? money(p.price) : 'Precio por confirmar'}</span><div class="product-actions"><button class="detail-button" data-open="${p.id}" aria-label="Ver detalle de ${esc(p.name)}">Ver detalle <span aria-hidden="true">↗</span></button>${addControl(p)}</div></div></div></article>`;
 }
 function matches(p) {
   return norm(state.q)
@@ -177,7 +189,7 @@ function buildNav() {
   $('#category-nav').innerHTML = all
     .map((g) => {
       const count = categoryCount(g);
-      return `<button data-category="${g.id}" aria-pressed="${state.category === g.id}"><img class="category-thumb" src="assets/${g.photo}" alt="" width="60" height="60" loading="lazy"><span class="category-caption">${g.name}<small>${count} ${g.id === 'guardados' ? 'guardados' : 'productos'}</small></span></button>`;
+      return `<button data-category="${g.id}" aria-pressed="${state.category === g.id}"><img class="category-thumb" src="${thumb(`assets/${g.photo}`)}" data-full="assets/${g.photo}" alt="" width="60" height="60" loading="lazy"><span class="category-caption">${g.name}<small>${count} ${g.id === 'guardados' ? 'guardados' : 'productos'}</small></span></button>`;
     })
     .join('');
   $('#category-chips').innerHTML = all
@@ -296,7 +308,7 @@ function detailHTML(p) {
               : kind === 'manufacturer'
                 ? 'Imagen de referencia del producto. El servicio y la añada se confirman con el equipo.'
                 : '';
-  return `${media(p, true)}<div class="detail-inner"><div class="eyebrow">${esc(groupFor(p).name)} · ${esc(catLabel(p.productCategoryId))}</div><h2 id="detail-name">${esc(p.name)}</h2><div class="detail-pricebar"><span class="detail-price">${p.price > 0 ? money(p.price) : 'Precio por confirmar'}</span>${available(p) ? '' : '<span class="sold-out badge">Sin stock</span>'}</div><p class="description">${esc(p.displayDescription)}</p>${p.descriptionKind === 'name' ? '<p class="photo-disclosure">La carta no detalla una receta completa para este producto. Consulta ingredientes con el equipo.</p>' : ''}${p.descriptionSource ? `<p class="photo-disclosure">Nota del fabricante: <a href="${esc(p.descriptionSource)}" target="_blank" rel="noopener noreferrer">ver referencia ↗</a></p>` : ''}${optionGroups(p)}${disclosure ? `<aside class="image-note"><strong>Sobre la imagen</strong><p>${disclosure}</p></aside>` : ''}<p class="detail-meta">${p.price > 0 ? 'Precio publicado en pesos chilenos.' : 'La fuente registra $0. Consulta el precio antes de pedir.'}</p><button class="favorite-in-detail" data-save="${p.id}" aria-pressed="${saved.has(p.id)}">${saved.has(p.id) ? '♥ Guardado en' : '♡ Guardar en'} mis favoritos</button><div class="detail-sticky"><a class="button primary" href="${esc(waLink(`Hola Santa Elena Restobar 👋 Vengo desde la carta digital y quisiera consultar por: ${p.name}.`))}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a></div></div>`;
+  return `${media(p, true)}<div class="detail-inner"><div class="eyebrow">${esc(groupFor(p).name)} · ${esc(catLabel(p.productCategoryId))}</div><h2 id="detail-name">${esc(p.name)}</h2><div class="detail-pricebar"><span class="detail-price">${p.price > 0 ? money(p.price) : 'Precio por confirmar'}</span>${available(p) ? '' : '<span class="sold-out badge">Sin stock</span>'}</div><p class="description">${esc(p.displayDescription)}</p>${p.descriptionKind === 'name' ? '<p class="photo-disclosure">La carta no detalla una receta completa para este producto. Consulta ingredientes con el equipo.</p>' : ''}${p.descriptionSource ? `<p class="photo-disclosure">Nota del fabricante: <a href="${esc(p.descriptionSource)}" target="_blank" rel="noopener noreferrer">ver referencia ↗</a></p>` : ''}${optionGroups(p)}${disclosure ? `<aside class="image-note"><strong>Sobre la imagen</strong><p>${disclosure}</p></aside>` : ''}<p class="detail-meta">${p.price > 0 ? 'Precio publicado en pesos chilenos.' : 'La fuente registra $0. Consulta el precio antes de pedir.'}</p><button class="favorite-in-detail" data-save="${p.id}" aria-pressed="${saved.has(p.id)}">${saved.has(p.id) ? '♥ Guardado en' : '♡ Guardar en'} mis favoritos</button><div class="detail-sticky">${addControl(p, true)}<a class="button secondary" href="${esc(waLink(`Hola Santa Elena Restobar 👋 Vengo desde la carta digital y quisiera consultar por: ${p.name}.`))}" target="_blank" rel="noopener noreferrer">Consultar por WhatsApp ↗</a></div></div>`;
 }
 function showProduct(id, push = true) {
   const p = productMap.get(+id);
@@ -558,6 +570,7 @@ $('#subcategories').onclick = (e) => {
   }
 };
 document.addEventListener('click', (e) => {
+  if (cartClick(e)) return;
   const save = e.target.closest('[data-save]');
   if (save) {
     e.preventDefault();
@@ -579,6 +592,190 @@ document.addEventListener('click', (e) => {
     $('#nav-toggle').setAttribute('aria-expanded', 'false');
   }
 });
+
+// ── Pedido por WhatsApp ────────────────────────────────────────────────────
+// No cobra ni confirma nada: arma un mensaje con la selección y lo abre en WhatsApp.
+const CART_KEY = 'se-cart',
+  CART_MAX_QTY = 20,
+  CART_MAX_ITEMS = 40,
+  cartDialog = $('#cart-dialog');
+let cart = new Map(),
+  cartNote = '',
+  clearTimer;
+const canOrder = (p) => p.price > 0 && available(p);
+function saveCart() {
+  try {
+    localStorage.setItem(CART_KEY, JSON.stringify([...cart]));
+  } catch {}
+}
+function loadCart() {
+  try {
+    const raw = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
+    if (Array.isArray(raw))
+      for (const [id, q] of raw.slice(0, CART_MAX_ITEMS))
+        if (productMap.has(id) && Number.isInteger(q) && q > 0) cart.set(id, Math.min(q, CART_MAX_QTY));
+  } catch {}
+}
+function stepperHTML(p, q) {
+  return `<div class="stepper" role="group" aria-label="Cantidad de ${esc(p.name.trim())}"><button type="button" data-dec="${p.id}" aria-label="Quitar uno">−</button><output>${q}</output><button type="button" data-inc="${p.id}" aria-label="Agregar uno">+</button></div>`;
+}
+function addControl(p, big = false) {
+  if (!canOrder(p)) return '';
+  const q = cart.get(p.id) || 0;
+  return `<div class="add-wrap${big ? ' big' : ''}" data-addwrap="${p.id}">${
+    q
+      ? stepperHTML(p, q)
+      : `<button type="button" class="add-button" data-add="${p.id}" aria-label="Agregar ${esc(p.name.trim())} a mi pedido">+ Agregar</button>`
+  }</div>`;
+}
+function refreshAddControls(id) {
+  const p = productMap.get(id);
+  document.querySelectorAll(`[data-addwrap="${id}"]`).forEach((w) => {
+    const had = w.contains(document.activeElement),
+      t = document.createElement('div');
+    t.innerHTML = addControl(p, w.classList.contains('big'));
+    const next = t.firstElementChild;
+    w.replaceWith(next);
+    if (had) (next.querySelector('[data-inc]') || next.querySelector('button'))?.focus();
+  });
+}
+const cartLines = () => [...cart].map(([id, q]) => ({ p: productMap.get(id), q })).filter((x) => x.p);
+function cartTotals() {
+  let count = 0,
+    total = 0;
+  for (const { p, q } of cartLines())
+    if (canOrder(p)) {
+      count += q;
+      total += p.price * q;
+    }
+  return { count, total };
+}
+function cartMessage() {
+  const { total } = cartTotals(),
+    note = cartNote.replace(/\s+/g, ' ').trim().slice(0, 240),
+    items = cartLines()
+      .filter(({ p }) => canOrder(p))
+      .map(({ p, q }) => `• ${q} × ${p.name.replace(/\s+/g, ' ').trim()} — ${money(p.price * q)}`);
+  return [
+    'Hola Santa Elena Restobar 👋 Quisiera consultar por este pedido:',
+    '',
+    ...items,
+    '',
+    `Total referencial: ${money(total)}`,
+    ...(note ? [`Comentarios: ${note}`] : []),
+    '',
+    '¿Me confirman disponibilidad? ¡Gracias!',
+  ].join('\n');
+}
+function updateCartBar() {
+  const { count, total } = cartTotals();
+  $('#cart-bar').hidden = !count;
+  $('#cart-bar-count').textContent = count;
+  $('#cart-bar-total').textContent = money(total);
+  $('#open-cart').setAttribute(
+    'aria-label',
+    `Ver mi pedido: ${count} ${count === 1 ? 'producto' : 'productos'}, total ${money(total)}`,
+  );
+}
+function renderCart() {
+  const f = document.activeElement,
+    key = f?.dataset?.inc ? ['inc', f.dataset.inc] : f?.dataset?.dec ? ['dec', f.dataset.dec] : null,
+    lines = cartLines(),
+    { count, total } = cartTotals();
+  $('#cart-list').innerHTML = lines
+    .map(({ p, q }) => {
+      const ok = canOrder(p),
+        src = thumb(photo(p));
+      return `<li class="cart-item${ok ? '' : ' is-off'}"><img src="${esc(src)}"${src !== photo(p) ? ` data-full="${esc(photo(p))}"` : ''} alt="" width="64" height="64" loading="lazy"><div class="cart-item-info"><strong>${esc(p.name.replace(/\s+/g, ' ').trim())}</strong><span>${ok ? money(p.price) + ' c/u' : 'No disponible por ahora'}</span></div>${ok ? stepperHTML(p, q) : ''}<button type="button" class="cart-remove" data-remove="${p.id}" aria-label="Quitar ${esc(p.name.trim())} del pedido">×</button></li>`;
+    })
+    .join('');
+  $('#cart-empty').hidden = lines.length > 0;
+  $('#cart-body').hidden = !lines.length;
+  $('#cart-total').textContent = money(total);
+  $('#cart-count-label').textContent = `${count} ${count === 1 ? 'producto' : 'productos'}`;
+  const send = $('#cart-send');
+  send.href = count ? waLink(cartMessage()) : '#';
+  send.setAttribute('aria-disabled', String(!count));
+  if (key) ($(`#cart-list [data-${key[0]}="${key[1]}"]`) || $('#cart-dialog .dialog-close'))?.focus();
+}
+function setQty(id, q, announce = false) {
+  const p = productMap.get(id);
+  if (!p || !canOrder(p)) return;
+  q = Math.max(0, Math.min(CART_MAX_QTY, q));
+  if (q && !cart.has(id) && cart.size >= CART_MAX_ITEMS)
+    return notify('Tu pedido ya tiene muchos productos distintos. Envíalo y arma otro.');
+  if (q) cart.set(id, q);
+  else cart.delete(id);
+  saveCart();
+  refreshAddControls(id);
+  updateCartBar();
+  if (cartDialog.open) renderCart();
+  if (announce) notify(`${p.name.replace(/\s+/g, ' ').trim()} agregado a tu pedido`);
+}
+function openCart() {
+  renderCart();
+  cartDialog.showModal();
+  cartDialog.scrollTop = 0;
+}
+function cartClick(e) {
+  const t = e.target.closest('[data-add],[data-inc],[data-dec],[data-remove],#open-cart,[data-cart-clear],[data-cart-close]');
+  if (!t) return false;
+  e.preventDefault();
+  const id = +(t.dataset.add || t.dataset.inc || t.dataset.dec || t.dataset.remove);
+  if (t.dataset.add !== undefined) setQty(id, 1, true);
+  else if (t.dataset.inc !== undefined) setQty(id, (cart.get(id) || 0) + 1);
+  else if (t.dataset.dec !== undefined) setQty(id, (cart.get(id) || 0) - 1);
+  else if (t.dataset.remove !== undefined) setQty(id, 0);
+  else if (t.id === 'open-cart') openCart();
+  else if (t.hasAttribute('data-cart-close')) cartDialog.close();
+  else if (t.hasAttribute('data-cart-clear')) {
+    // Dos toques: el primero pide confirmación, así no se borra por accidente.
+    if (t.dataset.armed) {
+      cart.clear();
+      saveCart();
+      document.querySelectorAll('[data-addwrap]').forEach((w) => refreshAddControls(+w.dataset.addwrap));
+      updateCartBar();
+      renderCart();
+      delete t.dataset.armed;
+      t.textContent = 'Vaciar pedido';
+    } else {
+      t.dataset.armed = '1';
+      t.textContent = 'Toca de nuevo para vaciar';
+      clearTimeout(clearTimer);
+      clearTimer = setTimeout(() => {
+        delete t.dataset.armed;
+        t.textContent = 'Vaciar pedido';
+      }, 3500);
+    }
+  }
+  return true;
+}
+$('#cart-note').addEventListener('input', (e) => {
+  cartNote = e.target.value;
+  $('#cart-send').href = cartTotals().count ? waLink(cartMessage()) : '#';
+});
+cartDialog.addEventListener('click', (e) => {
+  if (e.target === cartDialog) cartDialog.close();
+});
+$('#cart-send').addEventListener('click', (e) => {
+  if (!cartTotals().count) e.preventDefault();
+});
+
+// ── Galería de la carta ────────────────────────────────────────────────────
+// Solo productos con imagen publicada por el restaurante.
+const GALLERY_IDS = [426, 235, 253, 265, 362, 400, 242, 244, 261, 254, 249, 239];
+function renderGallery() {
+  const track = $('#gallery-track');
+  if (!track) return;
+  track.innerHTML = GALLERY_IDS.map((id) => productMap.get(id))
+    .filter(Boolean)
+    .map((p) => {
+      const src = photo(p),
+        t = thumb(src);
+      return `<button type="button" class="gallery-tile" data-open="${p.id}" aria-label="Ver ${esc(p.name.trim())}"><img src="${esc(t)}"${t !== src ? ` data-full="${esc(src)}"` : ''} alt="${esc(p.name.trim())}" width="560" height="700" loading="lazy" decoding="async"><span>${esc(p.name.trim())}</span></button>`;
+    })
+    .join('');
+}
 $('.dialog-close').onclick = closeProduct;
 dialog.addEventListener('cancel', (e) => {
   e.preventDefault();
@@ -697,6 +894,9 @@ setInterval(clock, 1000);
     buildNav();
     render();
     renderFeatured();
+    renderGallery();
+    loadCart();
+    updateCartBar();
     hours();
     // Al cargar la tipografía cambian los anchos: se vuelve a centrar la categoría activa.
     document.fonts?.ready.then(() => centerActiveChip(true));

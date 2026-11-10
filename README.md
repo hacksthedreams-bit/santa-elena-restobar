@@ -45,3 +45,11 @@ La rama `gh-pages` contiene una versión **estática** de la interfaz (`npm run 
 - **Descripciones:** `npm run polish:menu` (`scripts/copy.mjs`) reescribe solo las 150 descripciones que la carta no trae (`descriptionKind: "name"`). Usa únicamente datos del nombre del producto (sabor, marca, formato) y no inventa recetas ni ingredientes. Es idempotente y debe ejecutarse después de `scripts/enrich.mjs` si alguna vez se vuelve a correr. No modifica ids, nombres, precios ni descripciones originales.
 - **Botellas de marca:** `python scripts/stage-bottles.py` (Pillow + numpy) compone las botellas recortadas sobre un escenario de barra y genera `assets/stage-*.webp`. Siguen identificadas como “Imagen de marca”; el producto 290 conserva su imagen publicada con el fondo reemplazado.
 
+## Segunda tanda de mejoras (10 de noviembre de 2026)
+
+- **Pedido por WhatsApp:** cada ficha tiene “+ Agregar” (con selector de cantidad), hay una barra flotante “Ver mi pedido” y una hoja con la lista, comentarios y total referencial (`cart.css` y la sección “Pedido por WhatsApp” de `app.js`). No cobra ni confirma nada: arma el mensaje y abre `wa.me`. El pedido se guarda solo en el dispositivo (`localStorage`). No se pueden agregar productos sin stock ni con precio por confirmar.
+- **Secciones nuevas:** “Arma tu selección” (tres pasos) y “Un vistazo a la carta” (galería con productos que tienen imagen publicada por el restaurante; los ids están en `GALLERY_IDS`).
+- **Velocidad:** `python scripts/make-thumbs.py` (`npm run thumbs`) crea `assets/sm/` con copias de 560 px que usan las listas de la versión estática. El Worker privado no las incluye (`build.mjs` omite `sm/`) y sigue con las imágenes completas. Las secciones bajo el pliegue usan `content-visibility`.
+- **SEO y redes:** `build-pages.mjs --domain` agrega canonical, Open Graph, imagen para compartir (`assets/og-image.jpg`) y datos estructurados de restaurante (solo nombre, dirección, coordenadas, menú e Instagram; sin horarios ni teléfono porque no están confirmados).
+- **Apertura a buscadores (pendiente de aprobación):** `npm run build:pages:publico` genera la versión sin `noindex`, con `robots.txt` abierto, `sitemap.xml` y el pie sin la palabra “demostración”. No usarlo hasta que el restaurante lo apruebe y confirme los horarios.
+
